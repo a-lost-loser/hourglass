@@ -13,9 +13,7 @@ sudo: false
 
 install: travis_retry composer install --no-interaction --prefer-source
 
-before_script: 
-  - git reset --hard HEAD
-  - composer self-update
+before_script: git reset --hard HEAD
 
 script:
   - vendor/bin/phpunit
