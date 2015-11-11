@@ -4,6 +4,24 @@ define('LARAVEL_START', microtime(true));
 
 /*
 |--------------------------------------------------------------------------
+<<<<<<< HEAD
+=======
+| Register Core Helpers
+|--------------------------------------------------------------------------
+*/
+
+$helperPath = __DIR__.'/../vendor/surgeon/nurse/src/Support/helpers.php';
+
+if (!file_exists($helperPath)) {
+    echo 'Missing Surgeon Nurse vendor files. Try running "composer install".'.PHP_EOL;
+    exit(1);
+}
+
+require $helperPath;
+
+/*
+|--------------------------------------------------------------------------
+>>>>>>> 3a5b0399d68d14718c760212ecc1f004ddb9d361
 | Register The Composer Auto Loader
 |--------------------------------------------------------------------------
 |

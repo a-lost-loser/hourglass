@@ -1,7 +1,7 @@
 {
-    "name": "trainforum/train",
-    "description": "Train Forum system",
-    "keywords": ["train", "forum", "trainforum", "laravel"],
+    "name": "surgeon/board",
+    "description": "Surgeon Board forum sytem",
+    "keywords": ["surgeon", "board", "forum", "laravel"],
     "license": "MIT",
 	"authors": [
 		{
@@ -11,11 +11,11 @@
 		}
 	],
 	"support": {
-		"issues": "https://github.com/trainforum/train/issues"
+		"issues": "https://github.com/surgeonboard/board/issues"
 	},
     "require": {
         "php": ">=5.5.9",
-        "trainforum/conductor": "~1.0",
+        "surgeon/nurse": "~1.0",
         "laravel/framework": "5.1.*",
 		"illuminate/html": "5.1.*"
     },

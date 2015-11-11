@@ -1,8 +1,8 @@
-We like to discuss and think forums are a great way to get in touch with your community. With Train Forum we want to make it hassle-free and easy to host and administrate your own forum. Train Forum is an adaptive, open-sourced forum system which tries to outperform competitive products and to be simpler to use and develop custom-made plugins for.
+We like to discuss and think forums are a great way to get in touch with your community. With SurgeonBoard we want to make it hassle-free and easy to host and administrate your own forum. SurgeonBoard is an adaptive, open-sourced forum system which tries to outperform competitive products and to be simpler to use and develop custom-made plugins for.
 
-[![Build Status](https://img.shields.io/travis/trainforum/train.svg)](https://packagist.org/packages/trainforum/train)
-[![Total Downloads](https://img.shields.io/github/downloads/trainforum/train/latest/total.svg)](https://packagist.org/packages/trainforum/train)
-[![License](https://img.shields.io/github/license/trainforum/train.svg)](https://packagist.org/packages/trainforum/train)
+[![Build Status](https://img.shields.io/travis/surgeonboard/board.svg?style=flat)](https://packagist.org/packages/surgeon/board)
+[![Total Downloads](https://img.shields.io/github/downloads/surgeonboard/board/latest/total.svg?style=flat)](https://packagist.org/packages/surgeon/board)
+[![License](https://img.shields.io/github/license/surgeonboard/board.svg?style=flat)](https://packagist.org/packages/surgeon/board)
 
 ## Coding standards
 
@@ -16,7 +16,7 @@ When contributing, please follow the following guides and code standards:
 
 The forum system uses [Laravel](http://laravel.com) as its foundation PHP framework.
 
-This repository additionally depends on the [Train Conductor](https://github.com/trainforum/conductor) core library.
+This repository additionally depends on the [Nurse](https://github.com/surgeonboard/nurse) core library.
 
 ### License
 
