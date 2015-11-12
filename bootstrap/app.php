@@ -38,7 +38,7 @@ $app->singleton(
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    Surgeon\Nurse\Foundation\Exceptions\Handler::class
+    Surgeon\Nurse\Foundation\Exception\Handler::class
 );
 
 /*

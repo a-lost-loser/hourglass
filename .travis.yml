@@ -11,9 +11,7 @@ matrix:
 
 sudo: false
 
-install:
-  - travis_retry composer install --no-interaction --prefer-source
-  - git clone https://github.com/surgeonboard/nurse.git vendor/surgeon/nurse
+install: travis_retry composer install --no-interaction --prefer-source
 
 before_script: git reset --hard HEAD
 
