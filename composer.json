@@ -1,45 +1,56 @@
 {
-    "name": "surgeon/board",
-    "description": "Surgeon Board forum sytem",
-    "keywords": ["surgeon", "board", "forum", "laravel"],
-    "license": "MIT",
-	"authors": [
-		{
-			"name": "Christopher Mühl",
-			"email": "cmuehl@unitybox.de",
-			"role": "Founder"
-		}
-	],
-	"support": {
-		"issues": "https://github.com/surgeonboard/board/issues"
-	},
-    "require": {
-        "php": ">=5.5.9",
-        "laravel/framework": "5.1.*",
-		"illuminate/html": "5.0.*",
-        "surgeon/nurse": "dev-master"
-    },
-    "require-dev": {
-        "fzaninotto/faker": "~1.4",
-        "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~4.0",
-        "phpspec/phpspec": "~2.1"
-    },
-    "autoload-dev": {
-        "classmap": [
-            "tests/TestCase.php",
-            "tests/UiTestCase.php",
-            "tests/PluginTestCase.php"
-        ]
-    },
-    "scripts": {
-        "post-create-project-cmd": [
-            "php artisan key:generate"
-        ]
-    },
-    "config": {
-        "preferred-install": "dist"
-    },
-	"minimum-stability": "dev",
-	"prefer-stable": true
+  "name": "surgeon/board",
+  "description": "Surgeon Board forum sytem",
+  "keywords": [
+    "surgeon",
+    "board",
+    "forum",
+    "laravel"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Christopher Mühl",
+      "email": "cmuehl@unitybox.de",
+      "role": "Founder"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/surgeonboard/board/issues"
+  },
+  "require": {
+    "php": ">=5.5.9",
+    "laravel/framework": "5.1.*",
+    "illuminate/html": "5.0.*",
+    "surgeon/nurse": "dev-master"
+  },
+  "require-dev": {
+    "fzaninotto/faker": "~1.4",
+    "mockery/mockery": "0.9.*",
+    "phpunit/phpunit": "~4.0",
+    "phpspec/phpspec": "~2.1",
+    "barryvdh/laravel-ide-helper": "^2.1@dev"
+  },
+  "autoload-dev": {
+    "classmap": [
+      "tests/TestCase.php",
+      "tests/UiTestCase.php",
+      "tests/PluginTestCase.php"
+    ]
+  },
+  "scripts": {
+    "post-create-project-cmd": [
+      "php artisan key:generate"
+    ],
+    "post-update-cmd": [
+      "php artisan clear-compiled",
+      "php artisan ide-helper:generate",
+      "php artisan optimize"
+    ]
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }

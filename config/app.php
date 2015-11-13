@@ -137,13 +137,19 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
         /*
-         * Application Service Providers...
+         * Surgeon Nurse Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Surgeon\Nurse\Foundation\Providers\AppServiceProvider::class,
+        Surgeon\Nurse\Html\HtmlServiceProvider::class,
+        Surgeon\Nurse\Parse\ParseServiceProvider::class,
+        Surgeon\Nurse\Http\UrlServiceProvider::class,
+        Surgeon\Nurse\Filesystem\FilesystemServiceProvider::class,
+        // App\Providers\AuthServiceProvider::class,
+        // App\Providers\EventServiceProvider::class,
+        // App\Providers\RouteServiceProvider::class,
 
     ],
 
@@ -158,7 +164,7 @@ return [
     |
     */
 
-    'aliases' => [
+    'aliases' => array_merge(include(base_path().'/vendor/surgeon/nurse/src/Support/aliases.php'), [
 
         'App'       => Illuminate\Support\Facades\App::class,
         'Artisan'   => Illuminate\Support\Facades\Artisan::class,
@@ -194,6 +200,6 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
 
-    ],
+    ]),
 
 ];
