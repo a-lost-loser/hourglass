@@ -1,4 +1,4 @@
-<?php namespace Board\Twig;
+<?php namespace System\Twig;
 
 use Illuminate\View\Engines\EngineInterface;
 use Twig_Environment;

@@ -1,4 +1,4 @@
-<?php namespace Board\Twig;
+<?php namespace System\Twig;
 
 use File;
 use Twig_Error_Loader;

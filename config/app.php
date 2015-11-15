@@ -108,7 +108,7 @@ return [
     |
     */
 
-    'providers' => [
+    'providers' => array_merge(include(base_path().'/vendor/surgeon/nurse/src/Support/providers.php'), [
 
         /*
          * Laravel Framework Service Providers...
@@ -140,18 +140,11 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
         /*
-         * Surgeon Nurse Service Providers...
+         * SurgeonBoard Board Module Service Provider...
          */
-        Surgeon\Nurse\Foundation\Providers\AppServiceProvider::class,
-        Surgeon\Nurse\Html\HtmlServiceProvider::class,
-        Surgeon\Nurse\Parse\ParseServiceProvider::class,
-        Surgeon\Nurse\Http\UrlServiceProvider::class,
-        Surgeon\Nurse\Filesystem\FilesystemServiceProvider::class,
-        // App\Providers\AuthServiceProvider::class,
-        // App\Providers\EventServiceProvider::class,
-        // App\Providers\RouteServiceProvider::class,
+        System\ServiceProvider::class,
 
-    ],
+    ]),
 
     /*
     |--------------------------------------------------------------------------

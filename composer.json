@@ -22,7 +22,8 @@
     "php": ">=5.5.9",
     "laravel/framework": "5.1.*",
     "illuminate/html": "5.0.*",
-    "surgeon/nurse": "dev-master"
+    "surgeon/nurse": "dev-master",
+    "surgeon/system": "~1.0"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",
@@ -37,6 +38,11 @@
       "tests/UiTestCase.php",
       "tests/PluginTestCase.php"
     ]
+  },
+  "autoload": {
+    "psr-4": {
+      "System\\": "modules/system"
+    }
   },
   "scripts": {
     "post-create-project-cmd": [

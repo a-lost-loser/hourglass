@@ -1,4 +1,4 @@
-<?php namespace Board\Twig;
+<?php namespace System\Twig;
 
 use Board\Markup\MarkupManager;
 use Twig_Extension;

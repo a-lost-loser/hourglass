@@ -1,9 +1,9 @@
-<?php namespace Board;
+<?php namespace System;
 
 use App;
-use Board\Twig\Engine as TwigEngine;
-use Board\Twig\Extension as TwigExtension;
-use Board\Twig\Loader as TwigLoader;
+use System\Twig\Engine as TwigEngine;
+use System\Twig\Extension as TwigExtension;
+use System\Twig\Loader as TwigLoader;
 use Surgeon\Nurse\Module\ModuleServiceProvider;
 use Surgeon\Nurse\Plugin\PluginManager;
 use Twig_Environment;
@@ -12,7 +12,7 @@ class ServiceProvider extends ModuleServiceProvider
 {
     public function register()
     {
-        parent::register('board');
+        parent::register('system');
 
         PluginManager::instance()->registerAll();
     }
@@ -21,12 +21,12 @@ class ServiceProvider extends ModuleServiceProvider
     {
         PluginManager::instance()->bootAll();
 
-        parent::boot('board');
+        parent::boot('system');
     }
 
     protected function registerTwigParser()
     {
-        App::singleton('twig.environment', function ($app) {
+        App::singleton('twig.environment', function () {
             $twig = new Twig_Environment(new TwigLoader, ['auto_reload' => true]);
             $twig->addExtension(new TwigExtension);
 

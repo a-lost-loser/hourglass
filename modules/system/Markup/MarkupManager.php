@@ -1,4 +1,4 @@
-<?php namespace Board\Markup;
+<?php namespace System\Markup;
 
 use Surgeon\Nurse\Support\Traits\Singleton;
 
