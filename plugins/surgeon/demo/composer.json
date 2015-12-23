@@ -1,0 +1,19 @@
+{
+  "name": "surgeon/demo-plugin",
+  "description": "SurgeonBoard Demo plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Christopher Mühl",
+      "email": "cmuehl@unitybox.de"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Surgeon\\Demo\\": "source"
+    }
+  },
+  "require": {
+    "php": ">=5.5.9"
+  }
+}

@@ -1,0 +1,10 @@
+base: Plugin
+
+plugin:
+  name: Surgeon Demo
+  description: Provides features for the SurgeonBoard
+  authors:
+    -
+      name: Christopher Mühl
+      email: cmuehl@unitybox.de
+      homepage: www.padarom.de
