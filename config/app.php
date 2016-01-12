@@ -142,7 +142,7 @@ return [
         /*
          * SurgeonBoard Board Module Service Provider...
          */
-        System\ServiceProvider::class,
+        Surgeon\Board\Backend\ServiceProvider::class,
 
     ]),
 

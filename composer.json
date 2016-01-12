@@ -41,8 +41,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Surgeon\\Board\\Backend\\": "modules/backend/source",
-      "Surgeon\\Board\\Forum\\": "modules/forum/source"
+      "Surgeon\\Board\\Backend\\": "backend",
+      "Surgeon\\Board\\Forum\\": "modules/forum"
     }
   },
   "scripts": {

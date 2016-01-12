@@ -1,6 +1,7 @@
-<?php namespace Surgeon\Board\Forum;
+<?php namespace Surgeon\Board\Backend;
 
 use Illuminate\Support\ServiceProvider as ServiceProviderBase;
+use Surgeon\Nurse\Plugin\PluginManager;
 
 class ServiceProvider extends ServiceProviderBase
 {
@@ -12,6 +13,11 @@ class ServiceProvider extends ServiceProviderBase
      */
     public function register()
     {
-        // TODO: Implement register() method.
+        PluginManager::instance()->registerAll();
+    }
+
+    public function boot()
+    {
+        PluginManager::instance()->bootAll();
     }
 }
