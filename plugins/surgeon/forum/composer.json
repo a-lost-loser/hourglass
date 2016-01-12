@@ -1,0 +1,19 @@
+{
+  "name": "surgeon/forum-plugin",
+  "description": "SurgeonBoard Forum plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Christopher Mühl",
+      "email": "cmuehl@unitybox.de"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Surgeon\\Forum\\": ""
+    }
+  },
+  "require": {
+    "php": ">=5.5.9"
+  }
+}
