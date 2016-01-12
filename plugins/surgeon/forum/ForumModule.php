@@ -1,16 +1,9 @@
 <?php namespace Surgeon\Forum;
 
-use Surgeon\Nurse\Plugin\PluginBase;
+use Surgeon\Nurse\Plugin\ModuleBase;
 
-class ForumModule extends PluginBase
+class ForumModule extends ModuleBase
 {
-    /**
-     * Forum Module is an elevated plugin as it extends core functionality and needs to be booted.
-     * 
-     * @var bool
-     */
-    public $elevated = true;
-
     /**
      * Register the service provider.
      *
