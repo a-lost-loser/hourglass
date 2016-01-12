@@ -21,8 +21,8 @@
   "require": {
     "php": ">=5.5.9",
     "laravel/framework": "5.1.*",
-    "illuminate/html": "5.0.*",
-    "surgeon/nurse": "dev-master",
+    "laravelcollective/html": "5.1.*",
+    "surgeon/nurse": "dev-master"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",
