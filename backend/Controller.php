@@ -1,4 +1,4 @@
-<?php namespace Surgeon\Backend;
+<?php namespace Surgeon\Board\Backend;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;

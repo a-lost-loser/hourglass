@@ -16,6 +16,6 @@ class ForumModule extends ModuleBase
 
     public function boot()
     {
-        dd($this->getConfigurationFromYaml());
+        require __DIR__.'/files/routes.php';
     }
 }
