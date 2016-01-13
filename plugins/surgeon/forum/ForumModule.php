@@ -11,11 +11,11 @@ class ForumModule extends ModuleBase
      */
     public function register()
     {
-
+        require __DIR__.'/files/routes.php';
     }
 
     public function boot()
     {
-        require __DIR__.'/files/routes.php';
+
     }
 }
