@@ -7,7 +7,7 @@ Route::group([
 ], function() {
 
     Route::get('/', function() {
-        return "Backend.";
+        return view('Backend::main');
     });
 
 });

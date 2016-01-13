@@ -2,6 +2,7 @@
 
 use Illuminate\Support\ServiceProvider as ServiceProviderBase;
 use Surgeon\Nurse\Plugin\PluginManager;
+use View;
 
 class ServiceProvider extends ServiceProviderBase
 {
@@ -18,6 +19,7 @@ class ServiceProvider extends ServiceProviderBase
 
         // Register backend routes
         $this->registerRoutes();
+        $this->registerViewNamespace();
 
     }
 
@@ -29,5 +31,10 @@ class ServiceProvider extends ServiceProviderBase
     protected function registerRoutes()
     {
         require __DIR__.'/files/routes.php';
+    }
+
+    protected function registerViewNamespace()
+    {
+        View::addNamespace('Backend', __DIR__.'/files/views');
     }
 }
