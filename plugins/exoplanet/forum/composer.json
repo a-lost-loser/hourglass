@@ -1,5 +1,5 @@
 {
-  "name": "surgeon/forum-plugin",
+  "name": "exoplanet/forum-plugin",
   "description": "SurgeonBoard Forum plugin",
   "license": "MIT",
   "authors": [
@@ -10,7 +10,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Surgeon\\Forum\\": ""
+      "Exoplanet\\Forum\\": ""
     }
   },
   "require": {

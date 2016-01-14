@@ -1,6 +1,6 @@
-<?php namespace Surgeon\Forum;
+<?php namespace Exoplanet\Forum;
 
-use Surgeon\Nurse\Plugin\ModuleBase;
+use Exoplanet\Atmosphere\Plugin\ModuleBase;
 
 class ForumModule extends ModuleBase
 {

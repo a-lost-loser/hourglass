@@ -1,7 +1,7 @@
-<?php namespace Surgeon\Board\Backend;
+<?php namespace Exoplanet\Backend;
 
 use Illuminate\Support\ServiceProvider as ServiceProviderBase;
-use Surgeon\Nurse\Plugin\PluginManager;
+use Exoplanet\Atmosphere\Plugin\PluginManager;
 use View;
 
 class ServiceProvider extends ServiceProviderBase

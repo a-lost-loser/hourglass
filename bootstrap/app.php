@@ -11,7 +11,7 @@
 |
 */
 
-$app = new Surgeon\Nurse\Foundation\Application(
+$app = new Exoplanet\Atmosphere\Foundation\Application(
     realpath(__DIR__.'/../')
 );
 
@@ -28,17 +28,17 @@ $app = new Surgeon\Nurse\Foundation\Application(
 
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
-    Surgeon\Nurse\Foundation\Http\Kernel::class
+    Exoplanet\Atmosphere\Foundation\Http\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
-    Surgeon\Nurse\Foundation\Console\Kernel::class
+    Exoplanet\Atmosphere\Foundation\Console\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    Surgeon\Nurse\Foundation\Exception\Handler::class
+    Exoplanet\Atmosphere\Foundation\Exception\Handler::class
 );
 
 /*

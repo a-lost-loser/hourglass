@@ -1,8 +1,8 @@
-We like to discuss and think forums are a great way to get in touch with your community. With SurgeonBoard we want to make it hassle-free and easy to host and administrate your own forum. SurgeonBoard is an adaptive, open-sourced forum system which tries to outperform competitive products and to be simpler to use and develop custom-made plugins for.
+We like to discuss and think forums are a great way to get in touch with your community. With Exoplanet we want to make it hassle-free and easy to host and administrate your own forum. Exoplanet is an adaptive, open-sourced forum system which tries to outperform competitive products and to be simpler to use and develop custom-made plugins for.
 
-[![Build Status](https://img.shields.io/travis/surgeonboard/board.svg?style=flat)](https://packagist.org/packages/surgeon/board)
-[![Total Downloads](https://img.shields.io/github/downloads/surgeonboard/board/latest/total.svg?style=flat)](https://packagist.org/packages/surgeon/board)
-[![License](https://img.shields.io/github/license/surgeonboard/board.svg?style=flat)](https://packagist.org/packages/surgeon/board)
+[![Build Status](https://img.shields.io/travis/exoplanetforum/board.svg?style=flat)](https://packagist.org/packages/exoplanet/board)
+[![Total Downloads](https://img.shields.io/github/downloads/exoplanetforum/board/latest/total.svg?style=flat)](https://packagist.org/packages/exoplanet/board)
+[![License](https://img.shields.io/github/license/exoplanetforum/board.svg?style=flat)](https://packagist.org/packages/exoplanet/board)
 
 ## Coding standards
 
@@ -16,8 +16,8 @@ When contributing, please follow the following guides and code standards:
 
 The forum system uses [Laravel](http://laravel.com) as its foundation PHP framework.
 
-This repository additionally depends on the [Nurse](https://github.com/surgeonboard/nurse) core library.
+This repository additionally depends on the [Atmosphere](https://github.com/exoplanetforum/atmosphere) core library.
 
 ### License
 
-The Train Forum is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Exoplanet is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).

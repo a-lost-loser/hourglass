@@ -1,6 +1,6 @@
-<?php namespace Surgeon\Forum\Controllers\Forum;
+<?php namespace Exoplanet\Forum\Controllers\Forum;
 
-use Surgeon\Board\Backend\Controller;
+use Exoplanet\Backend\Controller;
 
 class ListForumsController extends Controller
 {

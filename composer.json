@@ -1,12 +1,7 @@
 {
-  "name": "surgeon/board",
-  "description": "Surgeon Board forum sytem",
-  "keywords": [
-    "surgeon",
-    "board",
-    "forum",
-    "laravel"
-  ],
+  "name": "exoplanet/board",
+  "description": "Exoplanet Forum System",
+  "keywords": ["exo", "planet", "exoplanet", "laravel", "forum", "discussion"],
   "license": "MIT",
   "authors": [
     {
@@ -16,13 +11,13 @@
     }
   ],
   "support": {
-    "issues": "https://github.com/surgeonboard/board/issues"
+    "issues": "https://github.com/exoplanetforum/board/issues"
   },
   "require": {
     "php": ">=5.5.9",
     "laravel/framework": "5.1.*",
     "laravelcollective/html": "5.1.*",
-    "surgeon/nurse": "dev-master"
+    "exoplanet/atmosphere": "dev-master"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",
@@ -40,7 +35,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Surgeon\\Board\\Backend\\": "modules/backend"
+      "Exoplanet\\Backend\\": "modules/backend"
     }
   },
   "scripts": {

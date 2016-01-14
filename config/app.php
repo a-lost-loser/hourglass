@@ -108,7 +108,7 @@ return [
     |
     */
 
-    'providers' => array_merge(include(base_path().'/vendor/surgeon/nurse/src/Support/providers.php'), [
+    'providers' => array_merge(include(base_path().'/vendor/exoplanet/atmosphere/src/Support/providers.php'), [
 
         /*
          * Laravel Framework Service Providers...
@@ -142,7 +142,7 @@ return [
         /*
          * SurgeonBoard Board Module Service Provider...
          */
-        Surgeon\Board\Backend\ServiceProvider::class,
+        Exoplanet\Backend\ServiceProvider::class,
 
     ]),
 
@@ -157,7 +157,7 @@ return [
     |
     */
 
-    'aliases' => array_merge(include(base_path().'/vendor/surgeon/nurse/src/Support/aliases.php'), [
+    'aliases' => array_merge(include(base_path().'/vendor/exoplanet/atmosphere/src/Support/aliases.php'), [
 
         'App'       => Illuminate\Support\Facades\App::class,
         'Artisan'   => Illuminate\Support\Facades\Artisan::class,

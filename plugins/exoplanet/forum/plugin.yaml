@@ -1,8 +1,8 @@
 base: ForumModule
 
 plugin:
-  name: SurgeonBoard Forum
-  description: Provides the forum parts to the SurgeonBoard base
+  name: Exoplanet Forum
+  description: Provides the forum parts to the Exoplanet base
   authors:
     -
       name: Christopher Mühl

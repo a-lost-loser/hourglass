@@ -8,10 +8,10 @@ define('LARAVEL_START', microtime(true));
 |--------------------------------------------------------------------------
 */
 
-$helperPath = __DIR__.'/../vendor/surgeon/nurse/src/Support/helpers.php';
+$helperPath = __DIR__.'/../vendor/exoplanet/atmosphere/src/Support/helpers.php';
 
 if (!file_exists($helperPath)) {
-    echo 'Missing Surgeon Nurse vendor files. Try running "composer install".'.PHP_EOL;
+    echo 'Missing Core library files. Try running "composer install".'.PHP_EOL;
     exit(1);
 }
 
