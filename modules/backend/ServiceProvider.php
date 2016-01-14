@@ -3,6 +3,7 @@
 use Illuminate\Support\ServiceProvider as ServiceProviderBase;
 use Exoplanet\Atmosphere\Plugin\PluginManager;
 use View;
+use Blade;
 
 class ServiceProvider extends ServiceProviderBase
 {

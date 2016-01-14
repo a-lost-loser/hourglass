@@ -1,6 +1,8 @@
 <?php namespace Exoplanet\Forum;
 
 use Exoplanet\Atmosphere\Plugin\ModuleBase;
+use TemplateResolver;
+use View;
 
 class ForumModule extends ModuleBase
 {
@@ -11,11 +13,9 @@ class ForumModule extends ModuleBase
      */
     public function register()
     {
-        require __DIR__.'/files/routes.php';
-    }
+        $this->includeRoutes();
+        $this->includeViews();
 
-    public function boot()
-    {
-
+        TemplateResolver::addEvent('Exoplanet.Backend:testing', 'main', $this);
     }
 }

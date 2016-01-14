@@ -5,7 +5,9 @@
     </head>
 
     <body>
-        This is the backend.
-        @includeevent('hello')
+        <h2>Backend</h2>
+
+        <p>@templateevent('Exoplanet.Backend:testing') <i>(Event: 'Exoplanet.Backend:testing')</i></p>
+
     </body>
 </html>
