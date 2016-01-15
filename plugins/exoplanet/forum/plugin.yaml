@@ -1,4 +1,5 @@
-base: ForumModule
+base:
+  class: ForumModule
 
 plugin:
   name: Exoplanet Forum

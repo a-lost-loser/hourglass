@@ -1,4 +1,5 @@
-base: Plugin
+base:
+  source-dir: ""
 
 plugin:
   name: Surgeon Demo

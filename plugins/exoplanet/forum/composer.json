@@ -8,11 +8,6 @@
       "email": "cmuehl@unitybox.de"
     }
   ],
-  "autoload": {
-    "psr-4": {
-      "Exoplanet\\Forum\\": ""
-    }
-  },
   "require": {
     "php": ">=5.5.9"
   }

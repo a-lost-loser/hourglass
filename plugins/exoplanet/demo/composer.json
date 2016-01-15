@@ -8,11 +8,6 @@
       "email": "cmuehl@unitybox.de"
     }
   ],
-  "autoload": {
-    "psr-4": {
-      "Surgeon\\Demo\\": "source"
-    }
-  },
   "require": {
     "php": ">=5.5.9"
   }
