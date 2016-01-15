@@ -1,10 +1,10 @@
 <?php namespace Exoplanet\Forum;
 
-use Exoplanet\Atmosphere\Plugin\ModuleBase;
+use Exoplanet\Atmosphere\Plugin\PluginBase;
 use TemplateResolver;
 use View;
 
-class ForumModule extends ModuleBase
+class Plugin extends PluginBase
 {
     /**
      * Register the service provider.
@@ -13,9 +13,6 @@ class ForumModule extends ModuleBase
      */
     public function register()
     {
-        $this->includeRoutes();
-        $this->includeViews();
-
-        TemplateResolver::addEvent('Exoplanet.Backend:testing', 'main', $this);
+        TemplateResolver::addEvent($this, 'Exoplanet.Backend:testing', 'main');
     }
 }

@@ -7,7 +7,11 @@
     <body>
         <h2>Backend</h2>
 
-        <p>@templateevent('Exoplanet.Backend:testing') <i>(Event: 'Exoplanet.Backend:testing')</i></p>
+        @templatesection('Exoplanet.Backend::testing')
+            <p>Section 1</p>
+        @endtemplatesection
+
+        <p>@templateevent('Exoplanet.Backend::testing') <i>(Event: 'Exoplanet.Backend::testing')</i></p>
 
     </body>
 </html>

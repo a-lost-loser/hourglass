@@ -1,7 +1,18 @@
+# Dependency Management
 /vendor
 /node_modules
+
+# Homestead
 Homestead.yaml
 Homestead.json
+
+# Framework
 .env
+database.sqlite
+
+# PHPStorm
 .idea
+
+# Laravel IDE Helper
 _ide_helper.php
+.phpstorm.meta.php
