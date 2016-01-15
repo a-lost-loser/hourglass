@@ -38,6 +38,11 @@
       "Exoplanet\\Backend\\": "modules/backend"
     }
   },
+  "extra": {
+    "installer-paths": {
+      "plugins/{$vendor}/{$name}/": ["type:exoplanet-plugin"]
+    }
+  },
   "scripts": {
     "post-create-project-cmd": [
       "php artisan key:generate"
