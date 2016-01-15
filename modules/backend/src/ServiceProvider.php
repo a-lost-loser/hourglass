@@ -31,11 +31,11 @@ class ServiceProvider extends ServiceProviderBase
 
     protected function registerRoutes()
     {
-        require __DIR__.'/files/routes.php';
+        require __DIR__.'/../files/routes.php';
     }
 
     protected function registerViewNamespace()
     {
-        View::addNamespace('Backend', __DIR__.'/files/views');
+        View::addNamespace('Backend', __DIR__.'/../files/views');
     }
 }
