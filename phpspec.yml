@@ -1,5 +1,9 @@
 suites:
     main:
-        namespace: App
-        psr4_prefix: App
-        src_path: app
+        namespace: Exoplanet\Backend
+        psr4_prefix: Exoplanet\Backend
+        src_path: modules/backend
+    forum:
+        namespace: Exoplanet\Forum
+        psr4_prefix: Exoplanet\Forum
+        src_path: plugins/exoplanet/forum
