@@ -2,7 +2,6 @@
 
 use Exoplanet\Atmosphere\Plugin\PluginBase;
 use TemplateResolver;
-use View;
 
 class Plugin extends PluginBase
 {
