@@ -100,6 +100,8 @@ return [
 
     'migrations' => 'migrations',
 
+    'plugins' => 'plugins',
+
     /*
     |--------------------------------------------------------------------------
     | Redis Databases
