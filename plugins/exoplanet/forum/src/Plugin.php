@@ -5,6 +5,8 @@ use TemplateResolver;
 
 class Plugin extends PluginBase
 {
+    public $elevated = true;
+
     /**
      * Register the service provider.
      *
@@ -13,5 +15,10 @@ class Plugin extends PluginBase
     public function register()
     {
         TemplateResolver::addEvent($this, 'Exoplanet.Backend:testing', 'main');
+    }
+
+    public function boot()
+    {
+        throw new \Exception;
     }
 }

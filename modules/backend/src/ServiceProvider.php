@@ -3,7 +3,7 @@
 use Illuminate\Support\ServiceProvider as ServiceProviderBase;
 use Exoplanet\Atmosphere\Plugin\PluginManager;
 use View;
-use Blade;
+use File;
 
 class ServiceProvider extends ServiceProviderBase
 {
@@ -36,6 +36,6 @@ class ServiceProvider extends ServiceProviderBase
 
     protected function registerViewNamespace()
     {
-        View::addNamespace('Backend', __DIR__.'/../files/views');
+        View::addNamespace('Backend', __DIR__.'/../files/resources/views');
     }
 }
