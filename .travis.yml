@@ -1,23 +1,33 @@
 language: php
 
 php:
-  - 5.6
-  - 7.0
+  - '5.6'
+  - '7.0'
   - hhvm
 
 matrix:
   allow_failures:
-    - php: 7.0
+    - php: hhvm
 
-sudo: false
+sudo: false 
 
-install: travis_retry composer install --no-interaction --prefer-source
+env:
+  - GITHUB_OAUTH_TOKEN=3528dd74a54dddde076a3b6607ac11de8360e85b
 
-before_script: git reset --hard HEAD
+before_install: 
+  - git config --global github.accesstoken $GITHUB_OAUTH_TOKEN
+
+install: 
+  - travis_retry composer install --no-interaction
+
+before_script: 
+  - git reset --hard HEAD
+  - cp .env.example .env
 
 script:
   - vendor/bin/phpunit
   - vendor/bin/phpspec
+  - php artisan
 
 notifications:
   email: false
