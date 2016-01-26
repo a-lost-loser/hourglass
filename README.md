@@ -1,8 +1,17 @@
 We like to discuss and think forums are a great way to get in touch with your community. With Exoplanet we want to make it hassle-free and easy to host and administrate your own forum. Exoplanet is an adaptive, open-sourced forum system which tries to outperform competitive products and to be simpler to use and develop custom-made plugins for.
 
 [![Build Status](https://img.shields.io/travis/exoplanetforum/board.svg?style=flat)](https://packagist.org/packages/exoplanet/board)
-[![Total Downloads](https://img.shields.io/github/downloads/exoplanetforum/board/latest/total.svg?style=flat)](https://packagist.org/packages/exoplanet/board)
-[![License](https://img.shields.io/github/license/exoplanetforum/board.svg?style=flat)](https://packagist.org/packages/exoplanet/board)
+[![License](https://img.shields.io/packagist/l/exoplanet/board.svg?style=flat)](https://packagist.org/packages/exoplanet/board)
+[![Total Downloads](https://img.shields.io/packagist/dt/exoplanet/board.svg?style=flat)](https://packagist.org/packages/exoplanet/board)
+
+## Server Requirements
+As Exoplanet is based on Laravel 5.1, the same server requirements apply:
+
+- PHP >= 5.5.9
+- OpenSSL PHP Extension
+- PDO PHP Extension
+- Mbstring PHP Extension
+- Tokenizer PHP Extension
 
 ## Coding standards
 
