@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Schema\Blueprint;
-use Exoplanet\Atmosphere\Database\Migrations\Migration;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateForumsTable extends Migration
 {
