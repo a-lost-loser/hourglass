@@ -14,11 +14,12 @@ class Plugin extends PluginBase
      */
     public function register()
     {
+        parent::register();
         TemplateResolver::addEvent($this, 'Exoplanet.Backend:testing', 'main');
     }
 
     public function boot()
     {
-        throw new \Exception;
+        // throw new \Exception;
     }
 }
