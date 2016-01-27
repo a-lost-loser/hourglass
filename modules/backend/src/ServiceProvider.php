@@ -1,9 +1,8 @@
 <?php namespace Exoplanet\Backend;
 
 use Illuminate\Support\ServiceProvider as ServiceProviderBase;
-use Exoplanet\Atmosphere\Plugin\PluginManager;
+use Composer\Autoload\ClassLoader;
 use View;
-use File;
 
 class ServiceProvider extends ServiceProviderBase
 {
@@ -18,7 +17,6 @@ class ServiceProvider extends ServiceProviderBase
         // Register backend routes
         $this->registerRoutes();
         $this->registerViewNamespace();
-
     }
 
     public function boot()
