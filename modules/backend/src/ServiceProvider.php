@@ -15,9 +15,6 @@ class ServiceProvider extends ServiceProviderBase
      */
     public function register()
     {
-        // Register all plugins
-        PluginManager::instance()->registerAll();
-
         // Register backend routes
         $this->registerRoutes();
         $this->registerViewNamespace();
@@ -26,7 +23,7 @@ class ServiceProvider extends ServiceProviderBase
 
     public function boot()
     {
-        PluginManager::instance()->bootAll();
+
     }
 
     protected function registerRoutes()

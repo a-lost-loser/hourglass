@@ -140,9 +140,10 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
         /*
-         * SurgeonBoard Board Module Service Provider...
+         * Exoplanet Service Providers...
          */
         Exoplanet\Backend\ServiceProvider::class,
+        Exoplanet\Atmosphere\Plugin\PluginServiceProvider::class,
 
     ]),
 
