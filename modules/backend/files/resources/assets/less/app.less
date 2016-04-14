@@ -1,5 +1,31 @@
-@base: #f938ab;
+@background: #24262d;
+@nav-background: #2a2d35;
+@text-background: #393b45;
 
-.box {
+body {
+  background: @background;
+}
 
+.navigation {
+  background: @nav-background;
+  .negativemargin;
+}
+
+.content {
+  background: @text-background;
+  color: white;
+  .negativemargin;
+}
+
+.ui.grid>.row>.white.column {
+  background-color: #fff!important;
+  color: #000;
+  .negativemargin;
+}
+
+.negativemargin {
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }

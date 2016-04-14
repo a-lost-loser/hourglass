@@ -2,6 +2,7 @@
 
 use Communalizer\Core\Plugin\PluginBase;
 use TemplateResolver;
+use View;
 
 class Plugin extends PluginBase
 {
@@ -15,7 +16,8 @@ class Plugin extends PluginBase
     public function register()
     {
         parent::register();
-        TemplateResolver::addEvent($this, 'Communalizer.Backend:testing', 'main');
+        View::addNamespace('Communalizer.Forum', __DIR__.'/../files/resources/views');
+        TemplateResolver::addEvent($this, 'Communalizer.Backend::testing', 'main');
     }
 
     public function boot()

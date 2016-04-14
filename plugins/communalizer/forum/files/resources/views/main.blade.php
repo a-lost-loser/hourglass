@@ -1,1 +1,1 @@
-Communalizer.Forum::main
+This text comes from the Forum plugin

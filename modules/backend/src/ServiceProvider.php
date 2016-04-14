@@ -1,7 +1,6 @@
 <?php namespace Communalizer\Backend;
 
 use Illuminate\Support\ServiceProvider as ServiceProviderBase;
-use Composer\Autoload\ClassLoader;
 use View;
 
 class ServiceProvider extends ServiceProviderBase
