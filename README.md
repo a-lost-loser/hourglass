@@ -1,6 +1,6 @@
 We like to discuss and think forums are a great way to get in touch with your community. With Communalizer we want to make it hassle-free and easy to host and administrate your own forum. Communalizer is an adaptive, open-sourced forum system which tries to outperform competitive products and to be simpler to use and develop custom-made plugins for.
 
-[![Build Status](https://img.shields.io/travis/communalizerforum/board.svg?style=flat)](https://packagist.org/packages/communalizer/board)
+[![Build Status](https://img.shields.io/travis/communalizer/board.svg?style=flat)](https://packagist.org/packages/communalizer/board)
 [![License](https://img.shields.io/packagist/l/communalizer/board.svg?style=flat)](https://packagist.org/packages/communalizer/board)
 [![Total Downloads](https://img.shields.io/packagist/dt/communalizer/board.svg?style=flat)](https://packagist.org/packages/communalizer/board)
 
