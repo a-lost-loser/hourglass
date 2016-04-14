@@ -1,5 +1,9 @@
 var elixir = require('laravel-elixir');
 
+elixir.config.assetsPath = 'modules/backend/files/resources/assets';
+elixir.config.publicPath = 'assets';
+elixir.config.notifications = false;
+
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -12,5 +16,11 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss');
+
+    // Copy Semantic UI Sources
+    mix.copy('node_modules/semantic-ui-css/semantic.min.css', 'assets/css/semantic.min.css');
+    mix.copy('node_modules/semantic-ui-css/semantic.min.js', 'assets/js/semantic.min.js');
+
+    // Compile our backend's LESS
+    mix.less('app.less');
 });
