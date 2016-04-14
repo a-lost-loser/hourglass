@@ -1,6 +1,6 @@
-<?php namespace Exoplanet\Forum\Controllers\Forum;
+<?php namespace Communalizer\Forum\Controllers\Forum;
 
-use Exoplanet\Backend\Controller;
+use Communalizer\Backend\Controller;
 
 class ListForumsController extends Controller
 {

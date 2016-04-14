@@ -1,11 +1,11 @@
-We like to discuss and think forums are a great way to get in touch with your community. With Exoplanet we want to make it hassle-free and easy to host and administrate your own forum. Exoplanet is an adaptive, open-sourced forum system which tries to outperform competitive products and to be simpler to use and develop custom-made plugins for.
+We like to discuss and think forums are a great way to get in touch with your community. With Communalizer we want to make it hassle-free and easy to host and administrate your own forum. Communalizer is an adaptive, open-sourced forum system which tries to outperform competitive products and to be simpler to use and develop custom-made plugins for.
 
-[![Build Status](https://img.shields.io/travis/exoplanetforum/board.svg?style=flat)](https://packagist.org/packages/exoplanet/board)
-[![License](https://img.shields.io/packagist/l/exoplanet/board.svg?style=flat)](https://packagist.org/packages/exoplanet/board)
-[![Total Downloads](https://img.shields.io/packagist/dt/exoplanet/board.svg?style=flat)](https://packagist.org/packages/exoplanet/board)
+[![Build Status](https://img.shields.io/travis/communalizerforum/board.svg?style=flat)](https://packagist.org/packages/communalizer/board)
+[![License](https://img.shields.io/packagist/l/communalizer/board.svg?style=flat)](https://packagist.org/packages/communalizer/board)
+[![Total Downloads](https://img.shields.io/packagist/dt/communalizer/board.svg?style=flat)](https://packagist.org/packages/communalizer/board)
 
 ## Server Requirements
-As Exoplanet is based on Laravel 5.1, the same server requirements apply:
+As Communalizer is based on Laravel 5.1, the same server requirements apply:
 
 - PHP >= 5.5.9
 - OpenSSL PHP Extension
@@ -25,8 +25,8 @@ When contributing, please follow the following guides and code standards:
 
 The forum system uses [Laravel](http://laravel.com) as its foundation PHP framework.
 
-This repository additionally depends on the [Atmosphere](https://github.com/exoplanetforum/atmosphere) core library.
+This repository additionally depends on the [Communalizer Core](https://github.com/communalizer/core) library.
 
 ### License
 
-Exoplanet is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Communalizer is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).

@@ -1,23 +1,23 @@
 {
-  "name": "exoplanet/board",
-  "description": "Exoplanet Forum System",
-  "keywords": ["exo", "planet", "exoplanet", "laravel", "forum", "discussion"],
+  "name": "communalizer/board",
+  "description": "Communalizer Forum System",
+  "keywords": ["communalizer", "board", "community", "laravel", "forum", "discussion"],
   "license": "MIT",
   "authors": [
     {
       "name": "Christopher Mühl",
-      "email": "cmuehl@unitybox.de",
+      "email": "christopher@padarom.io",
       "role": "Founder"
     }
   ],
   "support": {
-    "issues": "https://github.com/exoplanetforum/board/issues"
+    "issues": "https://github.com/communalizer/board/issues"
   },
   "require": {
     "php": ">=5.5.9",
+    "communalizer/core": "dev-master",
     "laravel/framework": "5.1.*",
-    "laravelcollective/html": "5.1.*",
-    "exoplanet/atmosphere": "dev-master"
+    "laravelcollective/html": "5.1.*"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",
@@ -33,17 +33,23 @@
       "tests/PluginTestCase.php"
     ]
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/communalizer/core"
+    }
+  ],
   "autoload": {
     "classmap": [
       "modules/backend/files"
     ],
     "psr-4": {
-      "Exoplanet\\Backend\\": "modules/backend/src"
+      "Communalizer\\Backend\\": "modules/backend/src"
     }
   },
   "extra": {
     "installer-paths": {
-      "plugins/{$vendor}/{$name}/": ["type:exoplanet-plugin"]
+      "plugins/{$vendor}/{$name}/": ["type:communalizer-plugin"]
     }
   },
   "scripts": {

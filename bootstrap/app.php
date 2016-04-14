@@ -11,7 +11,7 @@
 |
 */
 
-$app = new Exoplanet\Atmosphere\Foundation\Application(
+$app = new Communalizer\Core\Foundation\Application(
     realpath(__DIR__.'/../')
 );
 
@@ -28,17 +28,17 @@ $app = new Exoplanet\Atmosphere\Foundation\Application(
 
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
-    Exoplanet\Atmosphere\Foundation\Http\Kernel::class
+    Communalizer\Core\Foundation\Http\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
-    Exoplanet\Atmosphere\Foundation\Console\Kernel::class
+    Communalizer\Core\Foundation\Console\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    Exoplanet\Atmosphere\Foundation\Exception\Handler::class
+    Communalizer\Core\Foundation\Exception\Handler::class
 );
 
 /*

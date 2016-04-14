@@ -1,11 +1,11 @@
 {
-  "name": "exoplanet/forum-plugin",
-  "description": "SurgeonBoard Forum plugin",
+  "name": "communalizer/forum-plugin",
+  "description": "Communalizer Forum plugin",
   "license": "MIT",
   "authors": [
     {
       "name": "Christopher Mühl",
-      "email": "cmuehl@unitybox.de"
+      "email": "christopher@padarom.io"
     }
   ],
   "require": {

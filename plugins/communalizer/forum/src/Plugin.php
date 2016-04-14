@@ -1,6 +1,6 @@
-<?php namespace Exoplanet\Forum;
+<?php namespace Communalizer\Forum;
 
-use Exoplanet\Atmosphere\Plugin\PluginBase;
+use Communalizer\Core\Plugin\PluginBase;
 use TemplateResolver;
 
 class Plugin extends PluginBase
@@ -15,7 +15,7 @@ class Plugin extends PluginBase
     public function register()
     {
         parent::register();
-        TemplateResolver::addEvent($this, 'Exoplanet.Backend:testing', 'main');
+        TemplateResolver::addEvent($this, 'Communalizer.Backend:testing', 'main');
     }
 
     public function boot()

@@ -1,4 +1,4 @@
-<?php namespace Exoplanet\Backend\Models;
+<?php namespace Communalizer\Backend\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

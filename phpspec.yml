@@ -1,9 +1,9 @@
 suites:
     main:
-        namespace: Exoplanet\Backend
-        psr4_prefix: Exoplanet\Backend
+        namespace: Communalizer\Backend
+        psr4_prefix: Communalizer\Backend
         src_path: modules/backend
     forum:
-        namespace: Exoplanet\Forum
-        psr4_prefix: Exoplanet\Forum
-        src_path: plugins/exoplanet/forum
+        namespace: Communalizer\Forum
+        psr4_prefix: Communalizer\Forum
+        src_path: plugins/communalizer/forum

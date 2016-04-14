@@ -1,4 +1,4 @@
-<?php namespace Exoplanet\Backend;
+<?php namespace Communalizer\Backend;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;

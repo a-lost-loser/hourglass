@@ -1,0 +1,11 @@
+base:
+  class: Plugin
+
+plugin:
+  name: Communalizer Forum
+  description: Provides the forum parts to the Communalizer base
+  authors:
+    -
+      name: Christopher Mühl
+      email: christopher@padarom.io
+      homepage: www.padarom.io

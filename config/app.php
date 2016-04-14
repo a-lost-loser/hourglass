@@ -108,7 +108,7 @@ return [
     |
     */
 
-    'providers' => array_merge(include(base_path().'/vendor/exoplanet/atmosphere/src/Support/providers.php'), [
+    'providers' => array_merge(include(base_path().'/vendor/communalizer/core/src/Support/providers.php'), [
 
         /*
          * Laravel Framework Service Providers...
@@ -118,10 +118,10 @@ return [
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
         Illuminate\Cache\CacheServiceProvider::class,
-        Exoplanet\Atmosphere\Foundation\Providers\ConsoleSupportServiceProvider::class,
+        Communalizer\Core\Foundation\Providers\ConsoleSupportServiceProvider::class,
         Illuminate\Routing\ControllerServiceProvider::class,
         Illuminate\Cookie\CookieServiceProvider::class,
-        Exoplanet\Atmosphere\Database\DatabaseServiceProvider::class,
+        Communalizer\Core\Database\DatabaseServiceProvider::class,
         Illuminate\Encryption\EncryptionServiceProvider::class,
         Illuminate\Filesystem\FilesystemServiceProvider::class,
         Illuminate\Foundation\Providers\FoundationServiceProvider::class,
@@ -140,10 +140,10 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
         /*
-         * Exoplanet Service Providers...
+         * Communalizer Service Providers...
          */
-        Exoplanet\Backend\ServiceProvider::class,
-        Exoplanet\Atmosphere\Plugin\PluginServiceProvider::class,
+        Communalizer\Backend\ServiceProvider::class,
+        Communalizer\Core\Plugin\PluginServiceProvider::class,
 
     ]),
 
@@ -158,7 +158,7 @@ return [
     |
     */
 
-    'aliases' => array_merge(include(base_path().'/vendor/exoplanet/atmosphere/src/Support/aliases.php'), [
+    'aliases' => array_merge(include(base_path().'/vendor/communalizer/core/src/Support/aliases.php'), [
 
         'App'       => Illuminate\Support\Facades\App::class,
         'Artisan'   => Illuminate\Support\Facades\Artisan::class,

@@ -7,11 +7,11 @@
     <body>
         <h2>Backend</h2>
 
-        @templatesection('Exoplanet.Backend::testing')
+        @templatesection('Communalizer.Backend::testing')
             <p>Section 1</p>
         @endtemplatesection
 
-        <p>@templateevent('Exoplanet.Backend::testing') <i>(Event: 'Exoplanet.Backend::testing')</i></p>
+        <p>@templateevent('Communalizer.Backend::testing') <i>(Event: 'Communalizer.Backend::testing')</i></p>
 
     </body>
 </html>
