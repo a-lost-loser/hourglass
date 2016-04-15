@@ -10,34 +10,46 @@
 
     <body>
 
-        <div class="ui padded grid">
-            <div class="white row">
-                <div class="two wide yellow left aligned column">
-                    <div class="header">
-                        Communalizer
+        <div class="ui padded grid middle aligned topfixed">
+            <div class="ui white top fixed menu row">
+
+                <div class="two wide yellow column">
+                    <div class="ui middle aligned grid">
+                        <div class="eight wide column"><h3>Communalizer</h3></div>
+                        <div class="eight wide right aligned column narrow">v 0.1.0a</div>
                     </div>
                 </div>
-                <div class="fourteen wide left aligned column white">
+
+                <div class="six wide left aligned column white">
                     <div class="ui transparent large left icon input">
                         <input type="text" placeholder="Search the backend ...">
                         <i class="search icon"></i>
                     </div>
                 </div>
+
+                <div class="eight wide right aligned column white">
+                    <a href="#">To the Forum</a>
+                </div>
+
             </div>
-            <div class="row negativemargin">
-                <div class="two wide column">
-                    <div class="ui left inverted vertical menu pointing fluid" style="background-color:#24262d;">
-                        <div class="item">
-                            <div class="header">System</div>
-                            <div class="menu">
-                                <a class="item active">Overview</a>
-                                <a class="item">Options</a>
-                                <a class="item">Updates</a>
-                            </div>
+
+        </div>
+
+        <div class="ui padded equal height grid fullheight">
+            <div class="two wide column">
+                <div class="ui left inverted vertical menu pointing fluid" style="background-color:#24262d;">
+                    <div class="item">
+                        <div class="header">System</div>
+                        <div class="menu">
+                            <a class="item active">Overview</a>
+                            <a class="item">Options</a>
+                            <a class="item">Updates</a>
                         </div>
                     </div>
                 </div>
-                <div class="fourteen wide column content">
+            </div>
+            <div class="fourteen wide stretched column content">
+                <div class="content">
                     @yield('content')
                 </div>
             </div>
@@ -46,5 +58,6 @@
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/semantic.min.js"></script>
         <script src="assets/js/vue.min.js"></script>
+
     </body>
 </html>

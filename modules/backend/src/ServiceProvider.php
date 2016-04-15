@@ -20,7 +20,7 @@ class ServiceProvider extends ServiceProviderBase
 
     public function boot()
     {
-
+        
     }
 
     protected function registerRoutes()

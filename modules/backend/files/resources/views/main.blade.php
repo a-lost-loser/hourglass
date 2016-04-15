@@ -6,4 +6,6 @@
     @endtemplatesection
 
     <p>@templateevent('Communalizer.Backend::testing') <i>(Event: 'Communalizer.Backend::testing')</i></p>
+
+    <p>Content</p>
 @endsection
