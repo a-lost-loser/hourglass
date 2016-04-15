@@ -2,8 +2,15 @@
 @nav-background: #2a2d35;
 @text-background: #393b45;
 
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
 body {
   background: @background;
+}
+
+.roboto, .roboto h1, .roboto h2, .roboto h3, .roboto h4, .roboto h5 {
+  font-family: 'Roboto', sans-serif !important;
+  letter-spacing: 2px;
 }
 
 .navigation {
@@ -24,10 +31,8 @@ body {
 }
 
 .negativemargin {
-  margin-top: -1rem;
-  margin-bottom: -1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  margin-top: -9px;
+  margin-bottom: -9px;
 }
 
 .narrow {
@@ -44,6 +49,11 @@ body {
 }
 
 .fullheight .column {
-  margin-top: 52px;
+  margin-top: 51px;
   margin-bottom: 1px;
+}
+
+.right.avatar {
+  margin-left: .25em;
+  margin-right: 0 !important;
 }

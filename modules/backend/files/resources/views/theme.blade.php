@@ -14,10 +14,7 @@
             <div class="ui white top fixed menu row">
 
                 <div class="two wide yellow column">
-                    <div class="ui middle aligned grid">
-                        <div class="eight wide column"><h3>Communalizer</h3></div>
-                        <div class="eight wide right aligned column narrow">v 0.1.0a</div>
-                    </div>
+                    <h3 class="roboto">Communalizer</h3>
                 </div>
 
                 <div class="six wide left aligned column white">
@@ -28,7 +25,10 @@
                 </div>
 
                 <div class="eight wide right aligned column white">
-                    <a href="#">To the Forum</a>
+                    <a href="#">
+                        <span>Demo User</span>
+                        <img class="ui right avatar image" src="//www.gravatar.com/avatar/88e3d8cccdcf81147746f6c4038b2d00?s=60&d=retro&r=PG">
+                    </a>
                 </div>
 
             </div>
