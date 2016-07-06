@@ -11,3 +11,6 @@ Route::group([
     });
 
 });
+
+Route::get('_assets/js', 'AssetController@javascript');
+Route::get('_assets/css', 'AssetController@stylesheet');

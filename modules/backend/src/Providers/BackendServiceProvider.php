@@ -1,6 +1,7 @@
 <?php namespace Communalizer\Backend\Providers;
 
 use Illuminate\Support\ServiceProvider as ServiceProviderBase;
+use Route;
 use View;
 
 class BackendServiceProvider extends ServiceProviderBase
@@ -25,7 +26,9 @@ class BackendServiceProvider extends ServiceProviderBase
 
     protected function registerRoutes()
     {
-        require $this->basePath('files/routes.php');
+        Route::group(['namespace' => 'Communalizer\Backend\Http\Controllers'], function() {
+            require $this->basePath('files/routes.php');
+        });
     }
 
     protected function registerViewNamespace()

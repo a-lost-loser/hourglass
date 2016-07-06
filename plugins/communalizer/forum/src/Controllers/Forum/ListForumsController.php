@@ -7,7 +7,7 @@ class ListForumsController extends Controller
 
     public function listAction($page = '')
     {
-        return "Hello, World!";
+        return view('Communalizer.Forum::main');
     }
 
 }

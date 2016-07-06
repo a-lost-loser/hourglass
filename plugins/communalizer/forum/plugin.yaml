@@ -9,3 +9,9 @@ plugin:
       name: Christopher Mühl
       email: christopher@padarom.io
       homepage: www.padarom.io
+
+  assets:
+    js:
+      - resources/assets/js/index.js
+    css:
+      - resources/assets/css/index.css
