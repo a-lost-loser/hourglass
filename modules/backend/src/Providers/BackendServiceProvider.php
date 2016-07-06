@@ -1,9 +1,9 @@
-<?php namespace Communalizer\Backend;
+<?php namespace Communalizer\Backend\Providers;
 
 use Illuminate\Support\ServiceProvider as ServiceProviderBase;
 use View;
 
-class ServiceProvider extends ServiceProviderBase
+class BackendServiceProvider extends ServiceProviderBase
 {
 
     /**
@@ -25,11 +25,17 @@ class ServiceProvider extends ServiceProviderBase
 
     protected function registerRoutes()
     {
-        require __DIR__.'/../files/routes.php';
+        require $this->basePath('files/routes.php');
     }
 
     protected function registerViewNamespace()
     {
-        View::addNamespace('Backend', __DIR__.'/../files/resources/views');
+        View::addNamespace('Backend', $this->basePath('files/resources/views'));
+    }
+
+    protected function basePath($file)
+    {
+        $postfix = '/' . ltrim($file, '/');
+        return base_path('modules/backend' . $postfix);
     }
 }

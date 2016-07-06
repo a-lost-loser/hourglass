@@ -1,4 +1,4 @@
-<?php namespace Communalizer\Backend;
+<?php namespace Communalizer\Backend\Http\Controllers;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;

@@ -1,6 +1,6 @@
 <?php namespace Communalizer\Forum\Controllers\Forum;
 
-use Communalizer\Backend\Controller;
+use Communalizer\Backend\Http\Controllers\Controller;
 
 class ListForumsController extends Controller
 {

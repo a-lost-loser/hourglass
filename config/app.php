@@ -142,7 +142,7 @@ return [
         /*
          * Communalizer Service Providers...
          */
-        Communalizer\Backend\ServiceProvider::class,
+        Communalizer\Backend\Providers\BackendServiceProvider::class,
         Communalizer\Core\Plugin\PluginServiceProvider::class,
 
     ]),
