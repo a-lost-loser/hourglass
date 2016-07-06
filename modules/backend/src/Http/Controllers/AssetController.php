@@ -1,7 +1,11 @@
 <?php namespace Communalizer\Backend\Http\Controllers;
 
+use Assetic\Asset\AssetCache;
 use Assetic\Asset\AssetCollection;
 use Assetic\Asset\FileAsset;
+use Assetic\Cache\FilesystemCache;
+use Assetic\Filter\JSMinFilter;
+use Assetic\Filter\JSqueezeFilter;
 use Communalizer\Core\Plugin\PluginManager;
 
 class AssetController extends Controller
@@ -54,12 +58,24 @@ class AssetController extends Controller
         foreach ($javascript as $path) {
             if (!file_exists($path))
                 continue; // Or throw an exception, or log
-            
+
             $assets[] = new FileAsset($path);
         }
 
-        $scripts = new AssetCollection($assets);
+        $cachePath = storage_path('framework/cache/javascript');
+        $collection = new AssetCollection();
+        $cache = new FilesystemCache($cachePath);
 
-        return $scripts->dump();
+        foreach ($assets as $asset) {
+            $cachedAsset = new AssetCache($asset, $cache);
+            $collection->add($cachedAsset);
+        }
+
+        $publicPath = $cachePath . '/' . 'public';
+        if (!file_exists($publicPath) || $collection->getLastModified() > filemtime($publicPath)) {
+            file_put_contents($publicPath, $collection->dump(new JSqueezeFilter()));
+        }
+
+        return file_get_contents($publicPath);
     }
 }
