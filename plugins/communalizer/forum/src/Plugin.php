@@ -1,12 +1,14 @@
 <?php namespace Communalizer\Forum;
 
-use Communalizer\Core\Plugin\PluginBase;
+use Communalizer\Core\Plugin\Plugin as Base;
 use TemplateResolver;
-use View;
+use Route;
 
-class Plugin extends PluginBase
+class Plugin extends Base
 {
     public $elevated = true;
+
+    public $installer = Installer::class;
 
     /**
      * Register the service provider.
@@ -16,12 +18,19 @@ class Plugin extends PluginBase
     public function register()
     {
         parent::register();
-        View::addNamespace('Communalizer.Forum', __DIR__.'/../files/resources/views');
+
         TemplateResolver::addEvent($this, 'Communalizer.Backend::testing', 'main');
     }
 
     public function boot()
     {
         // throw new \Exception;
+    }
+
+    protected $routeNamespace = 'Controllers';
+
+    public function routes()
+    {
+        Route::get('/', 'Forum\ListForumsController@listAction');
     }
 }

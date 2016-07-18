@@ -3,6 +3,7 @@ base:
 
 plugin:
   name: Communalizer Forum
+  version: 0.1.0 alpha
   description: Provides the forum parts to the Communalizer base
   authors:
     -
