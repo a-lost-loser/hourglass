@@ -10,7 +10,7 @@ Route::group([
     Route::post('login', 'AuthController@backendLogin');
 
     // Authenticated section
-    Route::group(['middleware' => 'auth.backend'], function() {
+    Route::group(['middleware' => 'permission:backend.access,backend.acp.access'], function() {
 
         Route::get('/', function() {
             return view('Backend::backend.main');

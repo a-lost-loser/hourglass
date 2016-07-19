@@ -1,6 +1,7 @@
 <?php namespace Hourglass\Backend\Providers;
 
 use Hourglass\Backend\Http\Middleware\Authenticate;
+use Hourglass\Backend\Http\Middleware\TestPermissions;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Kernel;
@@ -29,7 +30,9 @@ class BackendServiceProvider extends ServiceProvider
 
     public function boot(Router $router)
     {
-        $router->middleware('auth.backend', Authenticate::class);
+        $router->middleware('auth', Authenticate::class);
+        $router->middleware('permission', TestPermissions::class);
+
         $router->middlewareGroup('web', [
             EncryptCookies::class,
             AddQueuedCookiesToResponse::class,
