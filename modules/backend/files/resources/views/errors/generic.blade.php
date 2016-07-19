@@ -8,6 +8,7 @@
         <h2>
             <span>{{ $ind }}/{{ $total }}</span>
             <span>{{ $e['class'] }}</span>
+            {{ dd($e) }}
         </h2>
     @endforeach
 @endsection

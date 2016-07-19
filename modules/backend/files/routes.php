@@ -3,11 +3,19 @@
 Route::group([
     'prefix'     => Config::get('forum.backend-prefix', 'backend'),
     'as'         => 'backend::',
-    'middleware' => 'auth:backend-permission'
+    'middleware' => 'web',
 ], function() {
 
-    Route::get('/', function() {
-        return view('Backend::main');
+    Route::get('login', 'AuthController@showBackendLoginForm');
+    Route::post('login', 'AuthController@backendLogin');
+
+    // Authenticated section
+    Route::group(['middleware' => 'auth.backend'], function() {
+
+        Route::get('/', function() {
+            return view('Backend::backend.main');
+        });
+
     });
 
 });

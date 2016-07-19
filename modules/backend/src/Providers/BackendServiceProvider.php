@@ -1,10 +1,18 @@
 <?php namespace Hourglass\Backend\Providers;
 
-use Illuminate\Support\ServiceProvider as ServiceProviderBase;
+use Hourglass\Backend\Http\Middleware\Authenticate;
+use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
+use Illuminate\Cookie\Middleware\EncryptCookies;
+use Illuminate\Foundation\Http\Kernel;
+use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
+use Illuminate\Routing\Router;
+use Illuminate\Session\Middleware\StartSession;
+use Illuminate\Support\ServiceProvider;
+use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Route;
 use View;
 
-class BackendServiceProvider extends ServiceProviderBase
+class BackendServiceProvider extends ServiceProvider
 {
 
     /**
@@ -19,9 +27,16 @@ class BackendServiceProvider extends ServiceProviderBase
         $this->registerViewNamespace();
     }
 
-    public function boot()
+    public function boot(Router $router)
     {
-        
+        $router->middleware('auth.backend', Authenticate::class);
+        $router->middlewareGroup('web', [
+            EncryptCookies::class,
+            AddQueuedCookiesToResponse::class,
+            StartSession::class,
+            ShareErrorsFromSession::class,
+            VerifyCsrfToken::class,
+        ]);
     }
 
     protected function registerRoutes()

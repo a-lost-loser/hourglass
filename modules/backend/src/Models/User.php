@@ -1,8 +1,8 @@
 <?php namespace Hourglass\Backend\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Model
+class User extends Authenticatable
 {
     protected $fillable = [
         'name', 'email', 'password',
@@ -11,4 +11,9 @@ class User extends Model
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function can($permission)
+    {
+        return true;
+    }
 }

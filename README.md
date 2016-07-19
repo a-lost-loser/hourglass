@@ -5,9 +5,9 @@ We like to discuss and think forums are a great way to get in touch with your co
 [![Total Downloads](https://img.shields.io/packagist/dt/hourglass/board.svg?style=flat)](https://packagist.org/packages/hourglass/board)
 
 ## Server Requirements
-As Hourglass is based on Laravel 5.1, the same server requirements apply:
+As Hourglass is based on Laravel 5.3, the same server requirements apply:
 
-- PHP >= 5.5.9
+- PHP >= 5.6.4
 - OpenSSL PHP Extension
 - PDO PHP Extension
 - Mbstring PHP Extension

@@ -4,6 +4,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Application Environment
+    |--------------------------------------------------------------------------
+    |
+    | This value determines the "environment" your application is currently
+    | running in. This may determine how you prefer to configure various
+    | services your application utilizes. Set this in your ".env" file.
+    |
+    */
+    'env' => env('APP_ENV', 'production'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Application Debug Mode
     |--------------------------------------------------------------------------
     |
@@ -12,7 +24,6 @@ return [
     | application. If disabled, a simple generic error page is shown.
     |
     */
-
     'debug' => env('APP_DEBUG', false),
 
     /*
@@ -25,7 +36,6 @@ return [
     | your application so that it is used when running Artisan tasks.
     |
     */
-
     'url' => 'http://localhost',
 
     /*
@@ -38,7 +48,6 @@ return [
     | ahead and set this to a sensible default for you out of the box.
     |
     */
-
     'timezone' => 'UTC',
 
     /*
@@ -51,7 +60,6 @@ return [
     | to any of the locales which will be supported by the application.
     |
     */
-
     'locale' => 'en',
 
     /*
@@ -64,7 +72,6 @@ return [
     | the language folders that are provided through your application.
     |
     */
-
     'fallback_locale' => 'en',
 
     /*
@@ -78,7 +85,7 @@ return [
     |
     */
 
-    'key' => env('APP_KEY', 'SomeRandomString'),
+    'key' => env('APP_KEY'),
 
     'cipher' => 'AES-256-CBC',
 
@@ -95,7 +102,7 @@ return [
     |
     */
 
-    'log' => 'single',
+    'log' => env('APP_LOG', 'single'),
 
     /*
     |--------------------------------------------------------------------------
@@ -119,7 +126,6 @@ return [
         Illuminate\Bus\BusServiceProvider::class,
         Illuminate\Cache\CacheServiceProvider::class,
         Hourglass\Core\Foundation\Providers\ConsoleSupportServiceProvider::class,
-        Illuminate\Routing\ControllerServiceProvider::class,
         Illuminate\Cookie\CookieServiceProvider::class,
         Hourglass\Core\Database\DatabaseServiceProvider::class,
         Illuminate\Encryption\EncryptionServiceProvider::class,
