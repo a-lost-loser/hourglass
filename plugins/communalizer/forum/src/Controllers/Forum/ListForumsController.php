@@ -1,13 +1,13 @@
-<?php namespace Communalizer\Forum\Controllers\Forum;
+<?php namespace Hourglass\Forum\Controllers\Forum;
 
-use Communalizer\Backend\Http\Controllers\Controller;
+use Hourglass\Backend\Http\Controllers\Controller;
 
 class ListForumsController extends Controller
 {
 
     public function listAction($page = '')
     {
-        return view('Communalizer.Forum::main');
+        return view('Hourglass.Forum::main');
     }
 
 }

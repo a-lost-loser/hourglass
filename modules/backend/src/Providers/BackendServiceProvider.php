@@ -1,4 +1,4 @@
-<?php namespace Communalizer\Backend\Providers;
+<?php namespace Hourglass\Backend\Providers;
 
 use Illuminate\Support\ServiceProvider as ServiceProviderBase;
 use Route;
@@ -26,7 +26,7 @@ class BackendServiceProvider extends ServiceProviderBase
 
     protected function registerRoutes()
     {
-        Route::group(['namespace' => 'Communalizer\Backend\Http\Controllers'], function() {
+        Route::group(['namespace' => 'Hourglass\Backend\Http\Controllers'], function() {
             require $this->basePath('files/routes.php');
         });
     }

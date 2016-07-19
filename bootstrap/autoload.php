@@ -8,7 +8,7 @@ define('LARAVEL_START', microtime(true));
 |--------------------------------------------------------------------------
 */
 
-$helperPath = __DIR__.'/../vendor/communalizer/core/src/Support/helpers.php';
+$helperPath = __DIR__.'/../vendor/hourglass/core/src/Support/helpers.php';
 
 if (!file_exists($helperPath)) {
     echo 'Missing Core library files. Try running "composer install".'.PHP_EOL;

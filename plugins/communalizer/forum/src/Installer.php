@@ -1,6 +1,6 @@
-<?php namespace Communalizer\Forum;
+<?php namespace Hourglass\Forum;
 
-use Communalizer\Core\Plugin\PluginInstaller;
+use Hourglass\Core\Plugin\PluginInstaller;
 
 class Installer extends PluginInstaller
 {

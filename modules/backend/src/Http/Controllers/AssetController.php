@@ -1,4 +1,4 @@
-<?php namespace Communalizer\Backend\Http\Controllers;
+<?php namespace Hourglass\Backend\Http\Controllers;
 
 use Assetic\Asset\AssetCache;
 use Assetic\Asset\AssetCollection;
@@ -6,7 +6,7 @@ use Assetic\Asset\FileAsset;
 use Assetic\Cache\FilesystemCache;
 use Assetic\Filter\JSMinFilter;
 use Assetic\Filter\JSqueezeFilter;
-use Communalizer\Core\Plugin\PluginManager;
+use Hourglass\Core\Plugin\PluginManager;
 
 class AssetController extends Controller
 {

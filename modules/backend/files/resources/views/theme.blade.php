@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Communalizer</title>
+        <title>Hourglass</title>
 
         <link rel="stylesheet" href="assets/css/semantic.min.css">
         <link rel="stylesheet" href="assets/css/app.css">
@@ -14,7 +14,7 @@
             <div class="ui white top fixed menu row">
 
                 <div class="two wide yellow column">
-                    <h3 class="roboto">Communalizer</h3>
+                    <h3 class="roboto">Hourglass</h3>
                 </div>
 
                 <div class="six wide left aligned column white">

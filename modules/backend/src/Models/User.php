@@ -1,4 +1,4 @@
-<?php namespace Communalizer\Backend\Models;
+<?php namespace Hourglass\Backend\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

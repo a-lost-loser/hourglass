@@ -1,4 +1,4 @@
-<?php namespace Communalizer\Backend\Http\Controllers;
+<?php namespace Hourglass\Backend\Http\Controllers;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;

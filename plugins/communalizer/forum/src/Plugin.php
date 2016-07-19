@@ -1,6 +1,6 @@
-<?php namespace Communalizer\Forum;
+<?php namespace Hourglass\Forum;
 
-use Communalizer\Core\Plugin\Plugin as Base;
+use Hourglass\Core\Plugin\Plugin as Base;
 use TemplateResolver;
 use Route;
 
@@ -19,7 +19,7 @@ class Plugin extends Base
     {
         parent::register();
 
-        TemplateResolver::addEvent($this, 'Communalizer.Backend::testing', 'main');
+        TemplateResolver::addEvent($this, 'Hourglass.Backend::testing', 'main');
     }
 
     public function boot()
