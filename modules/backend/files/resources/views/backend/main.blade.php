@@ -1,4 +1,8 @@
-@extends('Backend::theme')
+@extends('Backend::bootstrap')
+
+@section('links')
+    <link href="{{ url('/_assets/css') }}">
+@endsection
 
 @section('content')
     @templatesection('Hourglass.Backend::testing')

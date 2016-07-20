@@ -4,6 +4,7 @@ use Assetic\Asset\AssetCache;
 use Assetic\Asset\AssetCollection;
 use Assetic\Asset\FileAsset;
 use Assetic\Cache\FilesystemCache;
+use Assetic\Filter\CssMinFilter;
 use Assetic\Filter\JSMinFilter;
 use Assetic\Filter\JSqueezeFilter;
 use Hourglass\Core\Plugin\PluginManager;
@@ -43,7 +44,29 @@ class AssetController extends Controller
     {
         $css = $this->getAssetList()['css'];
 
-        return $css;
+        $assets = [new FileAsset(base_path('assets/css/app.css'))];
+        foreach ($css as $path) {
+            if (!file_exists($path))
+                continue; // Or throw an exception, or log
+
+            $assets[] = new FileAsset($path);
+        }
+
+        $cachePath = storage_path('framework/cache/css');
+        $collection = new AssetCollection();
+        $cache = new FilesystemCache($cachePath);
+
+        foreach ($assets as $asset) {
+            $cachedAsset = new AssetCache($asset, $cache);
+            $collection->add($cachedAsset);
+        }
+
+        $publicPath = $cachePath . '/' . 'public';
+        if (!file_exists($publicPath) || $collection->getLastModified() > filemtime($publicPath)) {
+            file_put_contents($publicPath, $collection->dump());
+        }
+
+        return response(file_get_contents($publicPath))->header('Content-Type', 'text/css');
     }
 
     /**
@@ -54,7 +77,7 @@ class AssetController extends Controller
     {
         $javascript = $this->getAssetList()['js'];
 
-        $assets = [];
+        $assets = [new FileAsset(base_path('assets/js/app.js'))];
         foreach ($javascript as $path) {
             if (!file_exists($path))
                 continue; // Or throw an exception, or log
@@ -73,9 +96,9 @@ class AssetController extends Controller
 
         $publicPath = $cachePath . '/' . 'public';
         if (!file_exists($publicPath) || $collection->getLastModified() > filemtime($publicPath)) {
-            file_put_contents($publicPath, $collection->dump(new JSqueezeFilter()));
+            file_put_contents($publicPath, $collection->dump());
         }
 
-        return file_get_contents($publicPath);
+        return response(file_get_contents($publicPath))->header('Content-Type', 'application/javascript');
     }
 }
