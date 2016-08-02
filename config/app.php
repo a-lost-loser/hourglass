@@ -149,7 +149,7 @@ return [
          * Hourglass Service Providers...
          */
         Hourglass\Backend\Providers\BackendServiceProvider::class,
-        Hourglass\Core\Plugin\PluginServiceProvider::class,
+        // Hourglass\Core\Plugin\PluginServiceProvider::class,
 
     ]),
 

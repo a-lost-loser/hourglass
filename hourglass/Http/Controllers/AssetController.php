@@ -42,7 +42,8 @@ class AssetController extends Controller
     
     public function stylesheet()
     {
-        $css = $this->getAssetList()['css'];
+        // $css = $this->getAssetList()['css'];
+        $css = [];
 
         $assets = [new FileAsset(base_path('assets/css/app.css'))];
         foreach ($css as $path) {
@@ -75,7 +76,8 @@ class AssetController extends Controller
      */
     public function javascript()
     {
-        $javascript = $this->getAssetList()['js'];
+        // $javascript = $this->getAssetList()['js'];
+        $javascript = [];
 
         $assets = [new FileAsset(base_path('assets/js/app.js'))];
         foreach ($javascript as $path) {

@@ -4,7 +4,7 @@ use Hourglass\Core\Plugin\Plugin as Base;
 use TemplateResolver;
 use Route;
 
-class Plugin extends Base
+class ForumAddon extends Base
 {
     public $elevated = true;
 

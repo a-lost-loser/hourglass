@@ -1,9 +1,0 @@
-suites:
-    main:
-        namespace: Communalizer\Backend
-        psr4_prefix: Communalizer\Backend
-        src_path: modules/backend
-    forum:
-        namespace: Communalizer\Forum
-        psr4_prefix: Communalizer\Forum
-        src_path: plugins/communalizer/forum

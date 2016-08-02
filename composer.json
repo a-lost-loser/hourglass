@@ -1,6 +1,6 @@
 {
   "name": "hourglass/board",
-  "description": "Hourglass Forum System",
+  "description": "The Hourglass Forum System",
   "keywords": ["hourglass", "board", "community", "laravel", "forum", "discussion"],
   "license": "MIT",
   "authors": [
@@ -44,15 +44,15 @@
   ],
   "autoload": {
     "classmap": [
-      "modules/backend/files"
+      "hourglass/files"
     ],
     "psr-4": {
-      "Hourglass\\Backend\\": "modules/backend/src"
+      "Hourglass\\Backend\\": "hourglass"
     }
   },
   "extra": {
     "installer-paths": {
-      "plugins/{$vendor}/{$name}/": ["type:hourglass-plugin"]
+      "addons/{$name}": ["type:hourglass-addon"]
     }
   },
   "scripts": {

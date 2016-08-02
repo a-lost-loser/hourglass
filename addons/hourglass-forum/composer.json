@@ -1,6 +1,7 @@
 {
-  "name": "communalizer/forum-plugin",
-  "description": "Communalizer Forum plugin",
+  "name": "hourglass/hourglass-forum",
+  "type": "hourglass-addon",
+  "description": "Hourglass Forum plugin",
   "license": "MIT",
   "authors": [
     {
@@ -9,6 +10,6 @@
     }
   ],
   "require": {
-    "php": ">=5.5.9"
+    "composer/installers": "~1.0"
   }
 }

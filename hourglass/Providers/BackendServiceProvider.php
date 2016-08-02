@@ -45,7 +45,7 @@ class BackendServiceProvider extends ServiceProvider
     protected function registerRoutes()
     {
         Route::group(['namespace' => 'Hourglass\Backend\Http\Controllers'], function() {
-            require $this->basePath('files/routes.php');
+            require $this->basePath('Http/routes.php');
         });
     }
 
@@ -57,6 +57,6 @@ class BackendServiceProvider extends ServiceProvider
     protected function basePath($file)
     {
         $postfix = '/' . ltrim($file, '/');
-        return base_path('modules/backend' . $postfix);
+        return base_path('hourglass' . $postfix);
     }
 }

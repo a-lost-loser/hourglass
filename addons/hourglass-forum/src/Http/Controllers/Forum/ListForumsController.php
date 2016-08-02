@@ -1,4 +1,4 @@
-<?php namespace Hourglass\Forum\Controllers\Forum;
+<?php namespace Hourglass\Forum\Http\Controllers\Forum;
 
 use Hourglass\Backend\Http\Controllers\Controller;
 

@@ -1,10 +1,10 @@
 base:
-  class: Plugin
+  class: ForumAddon
 
 plugin:
-  name: Communalizer Forum
+  name: Hourglass Forum
   version: 0.1.0 alpha
-  description: Provides the forum parts to the Communalizer base
+  description: Provides the forum parts to the Hourglass base
   authors:
     -
       name: Christopher Mühl
