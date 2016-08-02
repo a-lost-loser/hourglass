@@ -5,6 +5,16 @@
 
     RewriteEngine On
 
+    # Blacklist code folders...
+    RewriteRule ^bootstrap/.* index.php [L,NC]
+    RewriteRule ^config/.* index.php [L,NC]
+    RewriteRule ^vendor/.* index.php [L,NC]
+    RewriteRule ^storage/.* index.php [L,NC]
+
+    # Block PHP files...
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule !^index.php index.php [L,NC]
+
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)/$ /$1 [L,R=301]
