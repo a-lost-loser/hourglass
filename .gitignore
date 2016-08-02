@@ -1,6 +1,7 @@
 # Dependency Management
 /vendor
 /node_modules
+composer.lock
 
 # Homestead
 Homestead.yaml
