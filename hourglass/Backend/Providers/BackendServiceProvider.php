@@ -45,7 +45,7 @@ class BackendServiceProvider extends ServiceProvider
     protected function registerRoutes()
     {
         Route::group(['namespace' => 'Hourglass\Backend\Http\Controllers'], function() {
-            require $this->basePath('Http/routes.php');
+            require $this->basePath('Backend/Http/routes.php');
         });
     }
 

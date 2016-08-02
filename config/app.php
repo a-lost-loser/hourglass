@@ -115,7 +115,7 @@ return [
     |
     */
 
-    'providers' => array_merge(include(base_path().'/vendor/hourglass/core/src/Support/providers.php'), [
+    'providers' => array_merge(include(base_path('hourglass/Core/Support/providers.php')), [
 
         /*
          * Laravel Framework Service Providers...
@@ -164,7 +164,7 @@ return [
     |
     */
 
-    'aliases' => array_merge(include(base_path().'/vendor/hourglass/core/src/Support/aliases.php'), [
+    'aliases' => array_merge(include(base_path('hourglass/Core/Support/aliases.php')), [
 
         'App'       => Illuminate\Support\Facades\App::class,
         'Artisan'   => Illuminate\Support\Facades\Artisan::class,

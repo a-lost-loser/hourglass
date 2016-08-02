@@ -5,28 +5,20 @@ We like to discuss and think forums are a great way to get in touch with your co
 [![Total Downloads](https://img.shields.io/packagist/dt/hourglass/board.svg?style=flat)](https://packagist.org/packages/hourglass/board)
 
 ## Server Requirements
-As Hourglass is based on Laravel 5.3, the same server requirements apply:
+As Hourglass is based on Laravel 5.2, the same server requirements apply:
 
-- PHP >= 5.6.4
+- PHP >= 5.5.9
 - OpenSSL PHP Extension
 - PDO PHP Extension
 - Mbstring PHP Extension
 - Tokenizer PHP Extension
 
 ## Coding standards
-
 When contributing, please follow the following guides and code standards:
 
 * [PSR 4 Coding Standards](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md)
 * [PSR 2 Coding Style Guide](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
 * [PSR 1 Coding Standards](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md)
 
-### Foundation library
-
-The forum system uses [Laravel](http://laravel.com) as its foundation PHP framework.
-
-This repository additionally depends on the [Hourglass Core](https://github.com/hourglasses/core) library.
-
 ### License
-
 Hourglass is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
