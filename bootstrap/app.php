@@ -11,7 +11,7 @@
 |
 */
 
-$app = new Hourglass\Core\Foundation\Application(
+$app = new Hourglass\Foundation\Application(
     realpath(__DIR__.'/../')
 );
 
@@ -28,17 +28,17 @@ $app = new Hourglass\Core\Foundation\Application(
 
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
-    Hourglass\Core\Foundation\Http\Kernel::class
+    Hourglass\Foundation\Http\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
-    Hourglass\Core\Foundation\Console\Kernel::class
+    Hourglass\Foundation\Console\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    Hourglass\Core\Foundation\Exception\Handler::class
+    Hourglass\Foundation\Exception\Handler::class
 );
 
 /*

@@ -115,7 +115,7 @@ return [
     |
     */
 
-    'providers' => array_merge(include(base_path('hourglass/Core/Support/providers.php')), [
+    'providers' => [
 
         /*
          * Laravel Framework Service Providers...
@@ -125,9 +125,9 @@ return [
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
         Illuminate\Cache\CacheServiceProvider::class,
-        Hourglass\Core\Foundation\Providers\ConsoleSupportServiceProvider::class,
+        Hourglass\Foundation\Providers\ConsoleSupportServiceProvider::class,
         Illuminate\Cookie\CookieServiceProvider::class,
-        Hourglass\Core\Database\DatabaseServiceProvider::class,
+        Hourglass\Database\DatabaseServiceProvider::class,
         Illuminate\Encryption\EncryptionServiceProvider::class,
         Illuminate\Filesystem\FilesystemServiceProvider::class,
         Illuminate\Foundation\Providers\FoundationServiceProvider::class,
@@ -143,15 +143,25 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
-        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
-
         /*
          * Hourglass Service Providers...
          */
-        Hourglass\Backend\Providers\BackendServiceProvider::class,
-        // Hourglass\Core\Plugin\PluginServiceProvider::class,
+        Hourglass\Foundation\Providers\AppServiceProvider::class,
+        Hourglass\Html\HtmlServiceProvider::class,
+        Hourglass\Parse\ParseServiceProvider::class,
+        Hourglass\Http\UrlServiceProvider::class,
+        Hourglass\File\FilesystemServiceProvider::class,
+        Hourglass\Config\ConfigServiceProvider::class,
+        Hourglass\Database\MigrationServiceProvider::class,
+        Hourglass\Foundation\Providers\BackendServiceProvider::class,
+        // Hourglass\Plugin\PluginServiceProvider::class,
 
-    ]),
+        /*
+         * Your Custom Service Providers...
+         */
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -164,25 +174,36 @@ return [
     |
     */
 
-    'aliases' => array_merge(include(base_path('hourglass/Core/Support/aliases.php')), [
+    'aliases' => [
 
+        /*
+         * Hourglass Aliases...
+         */
+        'Yaml'              => Hourglass\Support\Facades\Yaml::class,
+        'StringHelper'      => Hourglass\Support\Facades\StringHelper::class,
+        'File'              => Hourglass\Support\Facades\File::class,
+        'Config'            => Hourglass\Support\Facades\Config::class,
+        'TemplateResolver'  => Hourglass\Support\Facades\TemplateResolver::class,
+        'Html'              => Hourglass\Html\HtmlFacade::class,
+        'Form'              => Hourglass\Html\FormFacade::class,
+
+        /*
+         * Laravel Aliases...
+         */
         'App'       => Illuminate\Support\Facades\App::class,
         'Artisan'   => Illuminate\Support\Facades\Artisan::class,
         'Auth'      => Illuminate\Support\Facades\Auth::class,
         'Blade'     => Illuminate\Support\Facades\Blade::class,
         'Bus'       => Illuminate\Support\Facades\Bus::class,
         'Cache'     => Illuminate\Support\Facades\Cache::class,
-        'Config'    => Illuminate\Support\Facades\Config::class,
         'Cookie'    => Illuminate\Support\Facades\Cookie::class,
         'Crypt'     => Illuminate\Support\Facades\Crypt::class,
         'DB'        => Illuminate\Support\Facades\DB::class,
         'Eloquent'  => Illuminate\Database\Eloquent\Model::class,
         'Event'     => Illuminate\Support\Facades\Event::class,
-        'File'      => Illuminate\Support\Facades\File::class,
         'Gate'      => Illuminate\Support\Facades\Gate::class,
         'Hash'      => Illuminate\Support\Facades\Hash::class,
         'Input'     => Illuminate\Support\Facades\Input::class,
-        'Inspiring' => Illuminate\Foundation\Inspiring::class,
         'Lang'      => Illuminate\Support\Facades\Lang::class,
         'Log'       => Illuminate\Support\Facades\Log::class,
         'Mail'      => Illuminate\Support\Facades\Mail::class,
@@ -200,6 +221,10 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
 
-    ]),
+        /*
+         * Your Custom Aliases...
+         */
+
+    ],
 
 ];

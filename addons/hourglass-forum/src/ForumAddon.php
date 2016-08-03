@@ -1,6 +1,6 @@
 <?php namespace Hourglass\Forum;
 
-use Hourglass\Core\Plugin\Plugin as Base;
+use Hourglass\Plugin\Plugin as Base;
 use TemplateResolver;
 use Route;
 

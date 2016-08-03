@@ -9,6 +9,11 @@
       "email": "christopher@padarom.io"
     }
   ],
+  "autoload": {
+    "psr-4" {
+        "Hourglass\\Forum\\": "src"
+    }
+  }
   "require": {
     "composer/installers": "~1.0"
   }

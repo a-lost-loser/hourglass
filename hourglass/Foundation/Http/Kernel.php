@@ -1,0 +1,14 @@
+<?php namespace Hourglass\Foundation\Http;
+
+use Illuminate\Foundation\Http\Kernel as HttpKernel;
+
+class Kernel extends HttpKernel
+{
+  protected $middleware = [
+    \Illuminate\Session\Middleware\StartSession::class,
+  ];
+
+  protected $routeMiddleware = [
+    'auth' => \Hourglass\Http\Middleware\Authenticate::class,
+  ]; 
+}

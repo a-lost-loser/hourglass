@@ -1,6 +1,6 @@
 <?php namespace Hourglass\Forum\Http\Controllers\Forum;
 
-use Hourglass\Backend\Http\Controllers\Controller;
+use Hourglass\Http\Controllers\Controller;
 
 class ListForumsController extends Controller
 {
