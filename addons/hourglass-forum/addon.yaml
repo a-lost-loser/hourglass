@@ -1,7 +1,7 @@
 base:
-  class: ForumAddon
+  class: Hourglass\Forum\ForumAddon
 
-plugin:
+addon:
   name: Hourglass Forum
   version: 0.1.0 alpha
   description: Provides the forum parts to the Hourglass base

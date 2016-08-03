@@ -1,10 +1,10 @@
 <?php namespace Hourglass\Forum;
 
-use Hourglass\Plugin\Plugin as Base;
+use Hourglass\Addon\Addon;
 use TemplateResolver;
 use Route;
 
-class ForumAddon extends Base
+class ForumAddon extends Addon
 {
     public $elevated = true;
 
@@ -24,7 +24,7 @@ class ForumAddon extends Base
 
     public function boot()
     {
-        // throw new \Exception;
+
     }
 
     protected $routeNamespace = 'Controllers';

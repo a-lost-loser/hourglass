@@ -1,5 +1,5 @@
 {
-  "name": "hourglass/hourglass-forum",
+  "name": "hourglass/forum",
   "type": "hourglass-addon",
   "description": "Hourglass Forum plugin",
   "license": "MIT",
@@ -10,10 +10,10 @@
     }
   ],
   "autoload": {
-    "psr-4" {
+    "psr-4": {
         "Hourglass\\Forum\\": "src"
     }
-  }
+  },
   "require": {
     "composer/installers": "~1.0"
   }

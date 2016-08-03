@@ -1,6 +1,6 @@
 <?php namespace Hourglass\Html;
 
-use Hourglass\Plugin\Plugin;
+use Hourglass\Addon\Addon;
 use Hourglass\Support\Traits\Singleton;
 use Illuminate\Contracts\View\Factory;
 
@@ -19,14 +19,14 @@ class TemplateResolver
     protected $sections = [];
 
     /**
-     * @param Hourglass\Plugin\Plugin $plugin
+     * @param Hourglass\Addon\Addon $plugin
      * @param string $event
      * @param string $view
      * @param int $priority
      */
-    public function addEvent(Plugin $plugin, $event, $view, $priority = 100)
+    public function addEvent(Addon $addon, $event, $view, $priority = 100)
     {
-        $view = $plugin->getIdentifier() . '::' . $view;
+        $view = $addon->getIdentifier() . '::' . $view;
 
         if (!isset($this->eventList[$event])) {
             $this->eventList[$event] = [];
@@ -79,10 +79,10 @@ class TemplateResolver
         return true;
     }
 
-    public function disableSection(Plugin $plugin, $section)
+    public function disableSection(Addon $addon, $section)
     {
         $this->sections[$section]['enabled']     = false;
-        $this->sections[$section]['disabled-by'] = $plugin->getIdentifier();
+        $this->sections[$section]['disabled-by'] = $addon->getIdentifier();
     }
 
     public function isSectionEnabled($section)

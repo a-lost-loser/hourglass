@@ -17,7 +17,8 @@
     "php": ">=5.5.9",
     "laravel/framework": "5.2.*",
     "kriswallsmith/assetic": "^1.3",
-    "patchwork/jsqueeze": "^2.0"
+    "patchwork/jsqueeze": "^2.0",
+    "wikimedia/composer-merge-plugin": "^1.3"
   },
   "require-dev": {
     "symfony/dom-crawler": "~3.0",
@@ -37,30 +38,34 @@
   },
   "autoload": {
     "classmap": [
-      "hourglass/files"
+      "hourglass/Support/SupportingFiles"
     ],
     "psr-4": {
       "Hourglass\\": "hourglass"
     }
   },
   "extra": {
+    "merge-plugin": {
+      "include": [
+        "addons/hourglass-forum/composer.json"
+      ]
+    },
     "installer-paths": {
-      "addons/{$name}": ["type:hourglass-addon"]
+      "addons/${vendor}-{$name}": ["type:hourglass-addon"]
     }
   },
   "scripts": {
     "post-create-project-cmd": [
-      "php artisan key:generate"
+      "php pulse key:generate"
     ],
     "post-update-cmd": [
-      "php artisan clear-compiled",
-      "php artisan ide-helper:generate",
-      "php artisan optimize"
+      "php pulse clear-compiled",
+      "php pulse ide-helper:generate",
+      "php pulse optimize"
     ]
   },
   "config": {
     "preferred-install": "dist"
   },
-  "minimum-stability": "dev",
   "prefer-stable": true
 }

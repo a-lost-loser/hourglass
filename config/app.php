@@ -154,7 +154,7 @@ return [
         Hourglass\Config\ConfigServiceProvider::class,
         Hourglass\Database\MigrationServiceProvider::class,
         Hourglass\Foundation\Providers\BackendServiceProvider::class,
-        // Hourglass\Plugin\PluginServiceProvider::class,
+        Hourglass\Addon\AddonServiceProvider::class,
 
         /*
          * Your Custom Service Providers...
