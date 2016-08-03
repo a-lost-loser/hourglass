@@ -2,7 +2,6 @@
 
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\File;
 
 class Addon extends ServiceProvider
 {

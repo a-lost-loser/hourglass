@@ -18,10 +18,10 @@ class ConsoleSupportServiceProvider extends AggregateServiceProvider
      */
     protected $providers = [
         // \Illuminate\Auth\GeneratorServiceProvider::class,
-        \Illuminate\Console\ScheduleServiceProvider::class,
-        \Illuminate\Database\SeedServiceProvider::class,
+        // \Illuminate\Console\ScheduleServiceProvider::class,
+        // \Illuminate\Database\SeedServiceProvider::class,
         \Illuminate\Foundation\Providers\ComposerServiceProvider::class,
-        \Illuminate\Queue\ConsoleServiceProvider::class,
+        // \Illuminate\Queue\ConsoleServiceProvider::class,
         // \Illuminate\Routing\GeneratorServiceProvider::class,
         // \Illuminate\Session\CommandsServiceProvider::class,
 

@@ -29,7 +29,7 @@ return [
     */
 
     'providers' => [
-        //
+        \Hourglass\Addon\AddonFileProvider::class,
     ],
 
 ];

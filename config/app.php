@@ -149,7 +149,6 @@ return [
         Hourglass\Foundation\Providers\AppServiceProvider::class,
         Hourglass\Html\HtmlServiceProvider::class,
         Hourglass\Parse\ParseServiceProvider::class,
-        Hourglass\Http\UrlServiceProvider::class,
         Hourglass\File\FilesystemServiceProvider::class,
         Hourglass\Config\ConfigServiceProvider::class,
         Hourglass\Database\MigrationServiceProvider::class,
