@@ -8,7 +8,7 @@ define('LARAVEL_START', microtime(true));
 |--------------------------------------------------------------------------
 */
 
-require __DIR__.'/../hourglass/Support/SupportingFiles/helpers.php';
+require __DIR__.'/../hourglass/helpers.php';
 
 /*
 |--------------------------------------------------------------------------

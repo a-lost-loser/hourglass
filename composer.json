@@ -29,19 +29,9 @@
     "phpspec/phpspec": "~2.1",
     "barryvdh/laravel-ide-helper": "^2.1@dev"
   },
-  "autoload-dev": {
-    "classmap": [
-      "tests/TestCase.php",
-      "tests/UiTestCase.php",
-      "tests/PluginTestCase.php"
-    ]
-  },
   "autoload": {
-    "classmap": [
-      "hourglass/Support/SupportingFiles"
-    ],
     "psr-4": {
-      "Hourglass\\": "hourglass"
+      "Hourglass\\": "hourglass/src"
     }
   },
   "extra": {

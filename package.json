@@ -4,9 +4,10 @@
     "gulp": "^3.8.8"
   },
   "dependencies": {
+    "bootstrap": "4.0.0-alpha.2",
     "jquery": "^2.2.3",
     "laravel-elixir": "^3.0.0",
-    "vue": "^1.0.21",
-    "bootstrap": "4.0.0-alpha.2"
+    "trianglify": "^1.0.0",
+    "vue": "^1.0.21"
   }
 }

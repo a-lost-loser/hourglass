@@ -1,6 +1,6 @@
 var elixir = require('laravel-elixir');
 
-elixir.config.assetsPath = 'modules/backend/files/resources/assets';
+elixir.config.assetsPath = 'hourglass/Support/SupportingFiles/resources/assets';
 elixir.config.publicPath = 'assets';
 elixir.config.notifications = false;
 
