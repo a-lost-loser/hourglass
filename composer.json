@@ -30,6 +30,9 @@
     "barryvdh/laravel-ide-helper": "^2.1@dev"
   },
   "autoload": {
+    "classmap": [
+      "hourglass/tests"
+    ],
     "psr-4": {
       "Hourglass\\": "hourglass/src"
     }

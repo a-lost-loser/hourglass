@@ -125,9 +125,9 @@ return [
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
         Illuminate\Cache\CacheServiceProvider::class,
-        Hourglass\Foundation\Providers\ConsoleSupportServiceProvider::class,
+        // Hourglass\Foundation\Providers\ConsoleSupportServiceProvider::class,
         Illuminate\Cookie\CookieServiceProvider::class,
-        Hourglass\Database\DatabaseServiceProvider::class,
+        // Hourglass\Database\DatabaseServiceProvider::class,
         Illuminate\Encryption\EncryptionServiceProvider::class,
         Illuminate\Filesystem\FilesystemServiceProvider::class,
         Illuminate\Foundation\Providers\FoundationServiceProvider::class,
@@ -146,14 +146,14 @@ return [
         /*
          * Hourglass Service Providers...
          */
-        Hourglass\Foundation\Providers\AppServiceProvider::class,
-        Hourglass\Html\HtmlServiceProvider::class,
-        Hourglass\Parse\ParseServiceProvider::class,
-        Hourglass\File\FilesystemServiceProvider::class,
-        Hourglass\Config\ConfigServiceProvider::class,
-        Hourglass\Database\MigrationServiceProvider::class,
-        Hourglass\Foundation\Providers\BackendServiceProvider::class,
-        Hourglass\Addon\AddonServiceProvider::class,
+        Hourglass\Providers\ApplicationServiceProvider::class,
+        // Hourglass\Html\HtmlServiceProvider::class,
+        // Hourglass\Parse\ParseServiceProvider::class,
+        // Hourglass\File\FilesystemServiceProvider::class,
+        // Hourglass\Config\ConfigServiceProvider::class,
+        // Hourglass\Database\MigrationServiceProvider::class,
+        // Hourglass\Foundation\Providers\BackendServiceProvider::class,
+        // Hourglass\Addon\AddonServiceProvider::class,
 
         /*
          * Your Custom Service Providers...
