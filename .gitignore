@@ -2,6 +2,7 @@
 /vendor
 /node_modules
 composer.lock
+/build/logs/
 
 # Homestead
 Homestead.yaml
