@@ -11,13 +11,12 @@
 |
 */
 
-$factory->define(Hourglass\User::class, function (Faker\Generator $faker) {
+$factory->define(Hourglass\Models\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
         'name' => $faker->name,
         'email' => $faker->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
-        'remember_token' => str_random(10),
     ];
 });
