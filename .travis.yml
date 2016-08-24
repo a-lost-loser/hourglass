@@ -20,6 +20,7 @@ install:
 before_script: 
   - git reset --hard HEAD
   - cp .env.example .env
+  - php pulse key:generate
   - mkdir -p build/logs
 
 script:

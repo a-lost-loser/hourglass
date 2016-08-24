@@ -11,6 +11,6 @@ class ConsoleSupportServiceProvider extends AggregateServiceProvider
         'Hourglass\Providers\MigrationServiceProvider',
         // 'Illuminate\Database\SeedServiceProvider',
         'Illuminate\Foundation\Providers\ComposerServiceProvider',
-        // 'Illuminate\Queue\ConsoleServiceProvider',
+        'Hourglass\Providers\PulseServiceProvider',
     ];
 }
