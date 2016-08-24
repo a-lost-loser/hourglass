@@ -1,9 +1,9 @@
 <?php namespace Hourglass\Providers;
 
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\AggregateServiceProvider;
 use Illuminate\Support\Facades\Route;
 
-class ApplicationServiceProvider extends ServiceProvider
+class ApplicationServiceProvider extends AggregateServiceProvider
 {
     public function register()
     {

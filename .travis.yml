@@ -13,17 +13,23 @@ before_install:
   - git config --global github.accesstoken $GITHUB_OAUTH_TOKEN
   - touch storage/database.sqlite
 
-install: 
+install:
   - travis_retry composer install --no-interaction
+  - composer require satooshi/php-coveralls:~0.6@stable
 
 before_script: 
   - git reset --hard HEAD
   - cp .env.example .env
+  - mkdir -p build/logs
 
 script:
   - vendor/bin/phpunit
+  - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
   - vendor/bin/phpspec
   - php pulse
+
+after_success:
+  - sh -c 'if [ "$TRAVIS_PHP_VERSION" != "hhvm" ]; then php vendor/bin/coveralls -v; fi;'
 
 notifications:
   email: false
