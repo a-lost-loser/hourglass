@@ -2,13 +2,17 @@
 
 namespace Hourglass\Providers;
 
+use Illuminate\Foundation\Console\ClearCompiledCommand;
 use Illuminate\Foundation\Console\KeyGenerateCommand;
+use Illuminate\Foundation\Console\OptimizeCommand;
 use Illuminate\Support\ServiceProvider;
 
 class PulseServiceProvider extends ServiceProvider
 {
     protected $commands = [
         'KeyGenerate' => 'command.key.generate',
+        'ClearCompiled' => 'command.clear-compiled',
+        'Optimize' => 'command.optimize',
     ];
 
     /**
@@ -47,6 +51,30 @@ class PulseServiceProvider extends ServiceProvider
     {
         $this->app->singleton('command.key.generate', function () {
             return new KeyGenerateCommand;
+        });
+    }
+
+    /**
+     * Register the command.
+     *
+     * @return void
+     */
+    protected function registerClearCompiledCommand()
+    {
+        $this->app->singleton('command.clear-compiled', function () {
+            return new ClearCompiledCommand;
+        });
+    }
+
+    /**
+     * Register the command.
+     *
+     * @return void
+     */
+    protected function registerOptimizeCommand()
+    {
+        $this->app->singleton('command.optimize', function ($app) {
+            return new OptimizeCommand($app['composer']);
         });
     }
 }
