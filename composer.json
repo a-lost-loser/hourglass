@@ -32,7 +32,8 @@
   },
   "autoload": {
     "classmap": [
-      "hourglass/tests"
+      "hourglass/tests",
+      "hourglass/database"
     ],
     "psr-4": {
       "Hourglass\\": "hourglass/src"
