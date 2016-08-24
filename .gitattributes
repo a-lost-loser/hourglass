@@ -1,4 +1,3 @@
 * text=auto
 *.css linguist-vendored
-*.less linguist-vendored
-*.blade.php linguist-language=HTML
+*.scss linguist-vendored

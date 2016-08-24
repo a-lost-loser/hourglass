@@ -1,14 +1,6 @@
-var elixir = require('laravel-elixir');
+const elixir = require('laravel-elixir');
 
-elixir.config.assetsPath = 'hourglass/Support/SupportingFiles/resources/assets';
-elixir.config.publicPath = 'assets';
-elixir.config.notifications = false;
-
-var sassOptions = {
-    includePaths: [
-        'node_modules'
-    ]
-};
+require('laravel-elixir-vue');
 
 /*
  |--------------------------------------------------------------------------
@@ -21,10 +13,7 @@ var sassOptions = {
  |
  */
 
-elixir(function(mix) {
-    // Compile our backend's SASS
-    mix.sass('app.scss', null, sassOptions);
-
-    // Compile our backend's JS
-    mix.browserify('app.js');
+elixir(mix => {
+    mix.sass('app.scss')
+    .webpack('app.js');
 });

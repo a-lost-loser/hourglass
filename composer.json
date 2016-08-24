@@ -1,6 +1,6 @@
 {
   "name": "hourglass/board",
-  "description": "The Hourglass Forum System",
+  "description": "The Hourglass Forum Software",
   "keywords": ["hourglass", "board", "community", "laravel", "forum", "discussion"],
   "license": "MIT",
   "authors": [
@@ -14,8 +14,8 @@
     "issues": "https://github.com/hourglasses/board/issues"
   },
   "require": {
-    "php": ">=5.5.9",
-    "laravel/framework": "5.2.*",
+    "php": ">=5.6.4",
+    "laravel/framework": "5.3.*",
     "kriswallsmith/assetic": "^1.3",
     "patchwork/jsqueeze": "^2.0",
     "wikimedia/composer-merge-plugin": "^1.3"
