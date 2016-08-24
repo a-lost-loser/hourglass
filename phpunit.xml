@@ -17,6 +17,8 @@
     <filter>
         <blacklist>
             <directory suffix=".php">vendor</directory>
+            <directory suffix=".php">storage</directory>
+            <directory suffix=".php">bootstrap</directory>
         </blacklist>
     </filter>
     <php>
