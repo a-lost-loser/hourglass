@@ -1,18 +1,11 @@
 <?php
 
 use Hourglass\Models\User;
-use Hourglass\Models\Permission;
 
 class BackendAuthorizationTest extends TestCase
 {
     use \Illuminate\Foundation\Testing\DatabaseMigrations;
-
-    public function setUp()
-    {
-        parent::setUp();
-
-        $this->seed('TestingDatabaseSeeder');
-    }
+    use \Hourglass\Foundation\Testing\DatabaseSeeds;
 
     public function test_it_redirects_to_a_login_page()
     {
