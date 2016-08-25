@@ -1,4 +1,4 @@
-![Hourglass Logo](http://i.imgur.com/fMJgiHW.jpg?1)
+![Hourglass Logo](http://i.imgur.com/fMJgiHW.jpg?2)
 
 We like to discuss and think forums are a great way to get in touch with your community. 
 With **Hourglass** we want to make it hassle-free and easy to host and administrate your own forum. 
