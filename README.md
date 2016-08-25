@@ -1,3 +1,5 @@
+![Hourglass Logo](http://i.imgur.com/fMJgiHW.jpg?1)
+
 We like to discuss and think forums are a great way to get in touch with your community. 
 With **Hourglass** we want to make it hassle-free and easy to host and administrate your own forum. 
 Hourglass is an adaptive, open-sourced forum system which tries to outperform competitive products and to be simpler to use and develop custom-made plugins for.
