@@ -2,7 +2,7 @@
 
 use Hourglass\Models\User;
 
-class BackendAuthorizationTest extends TestCase
+class AuthorizationTest extends TestCase
 {
     use \Illuminate\Foundation\Testing\DatabaseMigrations;
     use \Hourglass\Foundation\Testing\DatabaseSeeds;
