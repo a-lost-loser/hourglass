@@ -1,6 +1,7 @@
 <?php
 
 use Hourglass\Models\Permission;
+use Hourglass\Foundation\Testing\TestCase;
 
 class PermissionsTest extends TestCase
 {

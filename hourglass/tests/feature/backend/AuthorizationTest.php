@@ -1,6 +1,7 @@
 <?php
 
 use Hourglass\Models\User;
+use Hourglass\Foundation\Testing\TestCase;
 
 class AuthorizationTest extends TestCase
 {
