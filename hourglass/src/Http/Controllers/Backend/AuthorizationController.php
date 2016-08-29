@@ -15,7 +15,7 @@ class AuthorizationController extends Controller
     use ValidatesRequests;
     use RedirectsUsers;
 
-    protected $loginFormView = 'Hourglass.Backend::login';
+    protected $loginFormView = 'Hourglass.Backend::backend.login';
 
     /**
      * Path to redirect to when the user is logged in.

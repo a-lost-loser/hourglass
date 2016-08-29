@@ -1,0 +1,1 @@
+@extends('Hourglass.Backend::shared.scaffolding')
