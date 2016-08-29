@@ -49,4 +49,13 @@ class AuthorizationTest extends TestCase
             ->press('Log In')
             ->seePageIs('backend');
     }
+
+    public function test_it_redirects_back_to_the_login_form_when_the_login_credentials_are_incorrect()
+    {
+        $this->visit('backend/login')
+            ->type('admin@gethourglass.io', '#email')
+            ->type('doesnotexist', '#password')
+            ->press('Log In')
+            ->seePageIs('backend/login');
+    }
 }
