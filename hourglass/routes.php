@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['prefix' => 'backend'], function() {
+Route::group(['prefix' => 'backend', 'namespace' => 'Hourglass\Http\Controllers\Backend', 'middleware' => 'web'], function() {
 
     // Authenticated Area
     Route::group(['middleware' => 'backend'], function() {
@@ -12,8 +12,7 @@ Route::group(['prefix' => 'backend'], function() {
     });
 
     // Unauthenticated Area
-    Route::get('login', function() {
-        return 'Hourglass Login';
-    });
+    Route::get('login', 'AuthorizationController@showLoginForm');
+    Route::post('login', 'AuthorizationController@login');
 
 });

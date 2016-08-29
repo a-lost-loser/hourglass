@@ -8,6 +8,7 @@ class AuthorizationTest extends TestCase
     use \Illuminate\Foundation\Testing\DatabaseMigrations;
     use \Hourglass\Foundation\Testing\DatabaseSeeds;
 
+
     public function test_it_redirects_to_a_login_page()
     {
         $this->visit('backend')->seePageIs('backend/login');
@@ -31,5 +32,21 @@ class AuthorizationTest extends TestCase
             ->call('GET', $this->prepareUrlForRequest('backend'));
 
         $this->seeStatusCode(500);
+    }
+
+    public function test_it_allows_you_to_log_in()
+    {
+        $user = factory(User::class)->create([
+            'email' => 'admin@gethourglass.io',
+            'password' => bcrypt('abc'),
+        ]);
+
+        $user->setIndividualPermission('Hourglass.Backend::access.backend', true);
+
+        $this->visit('backend/login')
+            ->type('admin@gethourglass.io', '#email')
+            ->type('abc', '#password')
+            ->press('Log In')
+            ->seePageIs('backend');
     }
 }
