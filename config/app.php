@@ -143,11 +143,12 @@ return [
         Hourglass\Providers\LaravelServiceProvider::class,
         Hourglass\Providers\ApplicationServiceProvider::class,
         Hourglass\Providers\ConsoleSupportServiceProvider::class,
+        Hourglass\Providers\AddonSupportServiceProvider::class,
 
         /*
          * Your Custom Service Providers...
          */
-        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        // Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
     ],
 

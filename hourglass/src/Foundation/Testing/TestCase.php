@@ -2,7 +2,10 @@
 
 namespace Hourglass\Foundation\Testing;
 
-abstract class TestCase extends \Illuminate\Foundation\Testing\TestCase
+use Illuminate\Foundation\Testing\TestCase as BaseTest;
+use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
+
+abstract class TestCase extends BaseTest
 {
     /**
      * The base URL to use while testing the application.
