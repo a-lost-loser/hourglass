@@ -2,11 +2,11 @@
 
 We like to discuss and think forums are a great way to get in touch with your community. 
 With **Hourglass** we want to make it hassle-free and easy to host and administrate your own forum. 
-Hourglass is an adaptive, open-sourced forum system which tries to outperform competitive products and to be simpler to use and develop custom-made plugins for.
+Hourglass is an adaptive, open-sourced forum system which tries to outperform competitive products and to be simpler to use and develop custom-built addons for.
 
 [![Build Status](https://img.shields.io/travis/hourglass/hourglass.svg?style=flat-square)](https://travis-ci.org/hourglass/hourglass)
 [![Code Coverage](https://img.shields.io/coveralls/hourglass/hourglass.svg?style=flat-square)](https://coveralls.io/github/hourglass/hourglass)
-[![License](https://img.shields.io/packagist/l/hourglass/board.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/packagist/l/hourglass/hourglass.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 ## Install Hourglass
 Instructions on installing Hourglass can be found at our [installation guide](https://www.example.com/).
@@ -22,7 +22,7 @@ As Hourglass is based on Laravel 5.3, the same server requirements apply:
 - Tokenizer PHP Extension
 
 ## Develop Hourglass
-The best way to get started with Hourglass is to read our documentation or some of our cookbooks. Feel free to contribute by either helping us improve the existing codebase, or by developing new addons.
+The best way to get started with Hourglass is to read our documentation or some of our cookbooks. Feel free to contribute by either helping us improve the existing codebase, or by developing new addons. We're also very appreciative of bug reports and feature requests.
 
 #### Coding standards
 When contributing, please follow the following guides and code standards:
