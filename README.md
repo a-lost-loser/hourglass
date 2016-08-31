@@ -5,7 +5,8 @@ With **Hourglass** we want to make it hassle-free and easy to host and administr
 Hourglass is an adaptive, open-sourced forum system which tries to outperform competitive products and to be simpler to use and develop custom-built addons for.
 
 [![Build Status](https://img.shields.io/travis/hourglass/hourglass.svg?style=flat-square)](https://travis-ci.org/hourglass/hourglass)
-[![Code Coverage](https://img.shields.io/coveralls/hourglass/hourglass.svg?style=flat-square)](https://coveralls.io/github/hourglass/hourglass)
+[![Code Coverage](https://img.shields.io/codacy/coverage/3b1f2c5b9cd04984814d914bcbfaff1b.svg?style=flat-square)](https://www.codacy.com/app/hourglass/hourglass/dashboard)
+[![Code Quality](https://img.shields.io/codacy/grade/3b1f2c5b9cd04984814d914bcbfaff1b.svg?style=flat-square)](https://www.codacy.com/app/hourglass/hourglass/dashboard)
 [![License](https://img.shields.io/packagist/l/hourglass/hourglass.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 ## Install Hourglass
