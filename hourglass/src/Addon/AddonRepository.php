@@ -17,7 +17,7 @@ class AddonRepository
 
     public function getInstalledAddonList()
     {
-        $path = base_path('addons');
+        // $path = base_path('addons');
 
         $addonNames = [];
 

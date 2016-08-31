@@ -14,7 +14,7 @@ class ApplicationServiceProvider extends AggregateServiceProvider
 
     protected function registerRoutes()
     {
-        Route::group([], function ($app) {
+        Route::group([], function () {
             require __DIR__.'/../../routes.php';
         });
     }
