@@ -21,7 +21,8 @@
     "composer/composer": "~1.0",
     "hourglass/addon-installer": "~1.0",
     "hourglass/installer": "dev-master",
-    "hourglass/forum": "dev-master"
+    "hourglass/forum": "dev-master",
+    "filp/whoops": "^2.1"
   },
   "require-dev": {
     "symfony/dom-crawler": "~3.0",
