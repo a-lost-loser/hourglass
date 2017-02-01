@@ -5,6 +5,9 @@ namespace Hourglass\Providers;
 use Illuminate\Foundation\Console\ClearCompiledCommand;
 use Illuminate\Foundation\Console\KeyGenerateCommand;
 use Illuminate\Foundation\Console\OptimizeCommand;
+use Hourglass\Console\Commands\MigrateCommand;
+use Hourglass\Console\Commands\RollbackCommand as MigrateRollbackCommand;
+use Illuminate\Database\Console\Migrations\InstallCommand as MigrateInstallCommand;
 use Illuminate\Support\ServiceProvider;
 
 class PulseServiceProvider extends ServiceProvider
@@ -13,6 +16,9 @@ class PulseServiceProvider extends ServiceProvider
         'KeyGenerate' => 'command.key.generate',
         'ClearCompiled' => 'command.clear-compiled',
         'Optimize' => 'command.optimize',
+        'Migrate' => 'command.migrate',
+        'Rollback' => 'command.migrate.rollback',
+        'MigrateInstall' => 'command.migrate.install',
     ];
 
     /**
@@ -75,6 +81,43 @@ class PulseServiceProvider extends ServiceProvider
     {
         $this->app->singleton('command.optimize', function ($app) {
             return new OptimizeCommand($app['composer']);
+        });
+    }
+
+    /**
+     * Register the "migrate" migration command.
+     *
+     * @return void
+     */
+    protected function registerMigrateCommand()
+    {
+        $this->app->singleton('command.migrate', function ($app) {
+            return new MigrateCommand($app['migrator']);
+        });
+    }
+
+    /**
+     * Register the "migrate.rollback" migration command.
+     *
+     * @return void
+     */
+    protected function registerRollbackCommand()
+    {
+        $this->app->singleton('command.migrate.rollback', function ($app) {
+            return new MigrateRollbackCommand($app['migrator']);
+        });
+    }
+
+
+    /**
+     * Register the "migrate.install" command.
+     *
+     * @return void
+     */
+    protected function registerMigrateInstallCommand()
+    {
+        $this->app->singleton('command.migrate.install', function ($app) {
+            return new MigrateInstallCommand($app['migration.repository']);
         });
     }
 }

@@ -2,8 +2,6 @@
 
 namespace Hourglass\Providers;
 
-use Hourglass\Console\Commands\MigrateCommand;
-use Hourglass\Console\Commands\RollbackCommand;
 use Hourglass\Database\Migrator;
 use Illuminate\Database\MigrationServiceProvider as BaseMigrationServiceProvider;
 
@@ -23,30 +21,6 @@ class MigrationServiceProvider extends BaseMigrationServiceProvider
             $repository = $app['migration.repository'];
 
             return new Migrator($repository, $app['db'], $app['files']);
-        });
-    }
-
-    /**
-     * Register the "migrate" migration command.
-     *
-     * @return void
-     */
-    protected function registerMigrateCommand()
-    {
-        $this->app->singleton('command.migrate', function ($app) {
-            return new MigrateCommand($app['migrator']);
-        });
-    }
-
-    /**
-     * Register the "migrate" migration command.
-     *
-     * @return void
-     */
-    protected function registerRollbackCommand()
-    {
-        $this->app->singleton('command.migrate.rollback', function ($app) {
-            return new RollbackCommand($app['migrator']);
         });
     }
 }

@@ -8,8 +8,8 @@ class ConsoleSupportServiceProvider extends AggregateServiceProvider
 {
     protected $providers = [
         // 'Illuminate\Console\ScheduleServiceProvider',
-        'Hourglass\Providers\MigrationServiceProvider',
+        MigrationServiceProvider::class,
         'Illuminate\Foundation\Providers\ComposerServiceProvider',
-        'Hourglass\Providers\PulseServiceProvider',
+        PulseServiceProvider::class,
     ];
 }
