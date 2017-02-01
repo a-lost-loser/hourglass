@@ -5,7 +5,6 @@ namespace Hourglass\Providers;
 use Illuminate\Foundation\Console\ClearCompiledCommand;
 use Illuminate\Foundation\Console\KeyGenerateCommand;
 use Illuminate\Foundation\Console\OptimizeCommand;
-use Illuminate\Foundation\Console\TinkerCommand;
 use Illuminate\Support\ServiceProvider;
 
 class PulseServiceProvider extends ServiceProvider
@@ -14,7 +13,6 @@ class PulseServiceProvider extends ServiceProvider
         'KeyGenerate' => 'command.key.generate',
         'ClearCompiled' => 'command.clear-compiled',
         'Optimize' => 'command.optimize',
-        'Tinker' => 'command.tinker',
     ];
 
     /**
@@ -77,18 +75,6 @@ class PulseServiceProvider extends ServiceProvider
     {
         $this->app->singleton('command.optimize', function ($app) {
             return new OptimizeCommand($app['composer']);
-        });
-    }
-
-    /**
-     * Register the command.
-     *
-     * @return void
-     */
-    protected function registerTinkerCommand()
-    {
-        $this->app->singleton('command.tinker', function () {
-            return new TinkerCommand;
         });
     }
 }
