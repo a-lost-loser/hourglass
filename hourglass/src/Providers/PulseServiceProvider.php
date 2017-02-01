@@ -5,6 +5,7 @@ namespace Hourglass\Providers;
 use Illuminate\Foundation\Console\ClearCompiledCommand;
 use Illuminate\Foundation\Console\KeyGenerateCommand;
 use Illuminate\Foundation\Console\OptimizeCommand;
+use Illuminate\Database\Console\Seeds\SeedCommand;
 use Hourglass\Console\Commands\MigrateCommand;
 use Hourglass\Console\Commands\RollbackCommand as MigrateRollbackCommand;
 use Illuminate\Database\Console\Migrations\InstallCommand as MigrateInstallCommand;
@@ -19,6 +20,7 @@ class PulseServiceProvider extends ServiceProvider
         'Migrate' => 'command.migrate',
         'Rollback' => 'command.migrate.rollback',
         'MigrateInstall' => 'command.migrate.install',
+        'Seed' => 'command.seed',
     ];
 
     /**
@@ -118,6 +120,18 @@ class PulseServiceProvider extends ServiceProvider
     {
         $this->app->singleton('command.migrate.install', function ($app) {
             return new MigrateInstallCommand($app['migration.repository']);
+        });
+    }
+
+    /**
+     * Register the "seed" command.
+     *
+     * @return void
+     */
+    protected function registerSeedCommand()
+    {
+        $this->app->singleton('command.seed', function ($app) {
+            return new SeedCommand($app['db']);
         });
     }
 }

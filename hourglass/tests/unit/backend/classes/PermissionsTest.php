@@ -1,9 +1,9 @@
-<?php
+<?php namespace Tests\Unit\Backend\Classes;
 
 use Hourglass\Models\Permission;
-use Hourglass\Foundation\Testing\TestCase;
+use Hourglass\Foundation\Testing\BrowserTestCase;
 
-class PermissionsTest extends TestCase
+class PermissionsTest extends BrowserTestCase
 {
     use \Illuminate\Foundation\Testing\DatabaseMigrations;
     use \Hourglass\Foundation\Testing\DatabaseSeeds;

@@ -18,8 +18,7 @@ before_script:
 - php pulse key:generate
 - mkdir -p build/logs
 script:
-- vendor/bin/phpunit --coverage-clover build/logs/clover.xml
-- php pulse
+- php pulse dusk --coverage-clover=build/logs/clover.xml
 after_script:
 - php vendor/bin/codacycoverage clover
 notifications:

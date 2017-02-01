@@ -1,4 +1,4 @@
-<?php
+<?php namespace Tests\Unit\Backend\Classes;
 
 use Hourglass\Foundation\Testing\TestCase;
 use Hourglass\Models\User;

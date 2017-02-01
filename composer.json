@@ -22,8 +22,7 @@
     "hourglass/addon-installer": "~1.0",
     "hourglass/installer": "dev-master",
     "hourglass/forum": "dev-master",
-    "filp/whoops": "^2.1",
-    "laravel/dusk": "^1.0"
+    "filp/whoops": "^2.1"
   },
   "require-dev": {
     "symfony/dom-crawler": "~3.0",
@@ -31,16 +30,17 @@
     "fzaninotto/faker": "~1.4",
     "mockery/mockery": "0.9.*",
     "phpunit/phpunit": "~5.0",
+    "laravel/dusk": "^1.0",
     "codacy/coverage": "dev-master",
     "barryvdh/laravel-ide-helper": "^2.1@dev"
   },
   "autoload": {
     "classmap": [
-      "hourglass/tests",
       "hourglass/database"
     ],
     "psr-4": {
-      "Hourglass\\": "hourglass/src"
+      "Hourglass\\": "hourglass/src",
+      "Tests\\": "hourglass/tests"
     }
   },
   "scripts": {
