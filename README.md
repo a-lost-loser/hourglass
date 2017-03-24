@@ -34,3 +34,4 @@ When contributing, please follow the following guides and code standards:
 
 ### License
 Hourglass is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+

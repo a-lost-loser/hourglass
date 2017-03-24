@@ -1,20 +1,10 @@
-# Dependency Management
-/vendor
 /node_modules
-composer.lock
-/build/logs/
-
-# Homestead
-Homestead.yaml
+/public/storage
+/public/hot
+/storage/*.key
+/vendor
+/.idea
 Homestead.json
-
-# Framework
+Homestead.yaml
 .env
-database.sqlite
-
-# PHPStorm
-.idea
-
-# Laravel IDE Helper
-_ide_helper.php
-.phpstorm.meta.php
+.DS_Store
