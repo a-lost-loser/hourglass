@@ -23,7 +23,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        dd($this->app['config']);
-        //
+        $this->app->view->addNamespace('Hourglass', base_path('hourglass/resources/views'));
     }
 }

@@ -1,8 +1,8 @@
 ![Hourglass Logo](http://i.imgur.com/fMJgiHW.jpg?2)
 
-We like to discuss and think forums are a great way to get in touch with your community. 
-With **Hourglass** we want to make it hassle-free and easy to host and administrate your own forum. 
-Hourglass is an adaptive, open-sourced forum system which tries to outperform competitive products and to be simpler to use and develop custom-built addons for.
+We like to discuss and think forums are a great way to get in touch with your community.
+With **Hourglass** we want to make it hassle-free and easy to host and administrate your own forum.
+Hourglass is an adaptive, open-sourced forum system which tries to outperform competitive products by being simpler to use, administrate and develop for.
 
 [![Build Status](https://img.shields.io/travis/hourglass/hourglass.svg?style=flat-square)](https://travis-ci.org/hourglass/hourglass)
 [![Code Coverage](https://img.shields.io/codacy/coverage/3b1f2c5b9cd04984814d914bcbfaff1b.svg?style=flat-square)](https://www.codacy.com/app/hourglass/hourglass/dashboard)
@@ -10,11 +10,10 @@ Hourglass is an adaptive, open-sourced forum system which tries to outperform co
 [![License](https://img.shields.io/packagist/l/hourglass/hourglass.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 ## Install Hourglass
-Instructions on installing Hourglass can be found at our [installation guide](https://www.example.com/).
-The installation process has been kept simple, so you don't have to be a sysadmin to install it.
+Detailed instructions on installing Hourglass can be found in our installation guide.
 
 #### Server Requirements
-As Hourglass is based on Laravel 5.3, the same server requirements apply:
+Hourglass is based on Laravel 5.4, so the same server requirements apply:
 
 - PHP >= 5.6.4
 - OpenSSL PHP Extension
@@ -23,7 +22,7 @@ As Hourglass is based on Laravel 5.3, the same server requirements apply:
 - Tokenizer PHP Extension
 
 ## Develop Hourglass
-The best way to get started with Hourglass is to read our documentation or some of our cookbooks. Feel free to contribute by either helping us improve the existing codebase, or by developing new addons. We're also very appreciative of bug reports and feature requests.
+The best way to get started with Hourglass is to read our documentation or some of our cookbooks. Feel free to contribute by either helping us improve the existing codebase, or by developing new plugins. We're also very appreciative of bug reports and feature requests.
 
 #### Coding standards
 When contributing, please follow the following guides and code standards:
@@ -34,4 +33,3 @@ When contributing, please follow the following guides and code standards:
 
 ### License
 Hourglass is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
-
