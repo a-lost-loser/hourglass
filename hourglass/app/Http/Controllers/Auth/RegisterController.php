@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace Hourglass\Http\Controllers\Auth;
 
-use App\User;
-use App\Http\Controllers\Controller;
+use Hourglass\User;
+use Hourglass\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 

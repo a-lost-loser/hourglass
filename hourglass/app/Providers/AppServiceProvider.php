@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Hourglass\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -23,6 +23,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        dd($this->app['config']);
         //
     }
 }
