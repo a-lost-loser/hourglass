@@ -11,7 +11,7 @@
 |
 */
 
-$app = new Illuminate\Foundation\Application(
+$app = new Hourglass\Foundation\Application(
     realpath(__DIR__.'/../')
 );
 

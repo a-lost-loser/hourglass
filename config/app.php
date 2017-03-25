@@ -176,6 +176,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         Hourglass\Providers\EventServiceProvider::class,
         Hourglass\Providers\RouteServiceProvider::class,
+        Hourglass\Foundation\Plugins\PluginServiceProvider::class,
 
     ],
 
