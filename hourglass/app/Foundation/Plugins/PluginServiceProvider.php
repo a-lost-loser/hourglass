@@ -27,6 +27,9 @@ class PluginServiceProvider extends ServiceProvider
     public function register()
     {
         $this->addNamespaces();
+
+        $foo = new \Hourglass\Forum\Test;
+        $foo->foo();
     }
 
     protected function addNamespaces()
