@@ -2,7 +2,6 @@
 
 namespace Hourglass\Foundation;
 
-use Hourglass\Foundation\Plugins\PluginRepository;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\Application as BaseApplication;
 
@@ -16,8 +15,8 @@ class Application extends BaseApplication
      */
     public function registerConfiguredPlugins()
     {
-        (new PluginRepository($this, new Filesystem, $this->getCachedPluginsPath()))
-            ->load($this->config['app.providers']);
+        //(new PluginRepository($this, new Filesystem, $this->getCachedPluginsPath()))
+        //    ->load($this->config['app.providers']);
     }
 
     /**

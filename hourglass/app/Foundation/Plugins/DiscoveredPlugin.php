@@ -29,6 +29,19 @@ class DiscoveredPlugin
         $this->package = $package;
     }
 
+    public function getPath()
+    {
+        return $this->path;
+    }
+
+    public function getEntryClass()
+    {
+        $extra = $this->package->getExtra();
+        if (!isset($extra['entry'])) return null;
+
+        return $extra['entry'];
+    }
+
     /**
      * Registers all autoloaders specified in the package with the given class loader
      *

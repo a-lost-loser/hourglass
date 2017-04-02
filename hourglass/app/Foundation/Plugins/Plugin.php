@@ -20,4 +20,9 @@ abstract class Plugin extends ServiceProvider
     {
         //
     }
+
+    public final function canBeEnabled()
+    {
+        return true;
+    }
 }

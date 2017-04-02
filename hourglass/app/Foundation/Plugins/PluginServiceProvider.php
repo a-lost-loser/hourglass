@@ -2,13 +2,17 @@
 
 namespace Hourglass\Foundation\Plugins;
 
-use Composer\Autoload\ClassLoader;
-use Composer\Package\Loader\ArrayLoader;
-use Composer\Package\Loader\JsonLoader;
 use Illuminate\Support\ServiceProvider;
 
 class PluginServiceProvider extends ServiceProvider
 {
+    /**
+     * A list of all discovered plugins
+     *
+     * @var array
+     */
+    protected $plugins = [];
+
     /**
      * Bootstrap any application services.
      *
@@ -26,20 +30,62 @@ class PluginServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->addNamespaces();
-
-        $foo = new \Hourglass\Forum\Test;
-        $foo->foo();
+        $this->registerAllPlugins();
     }
 
-    protected function addNamespaces()
+    /**
+     * Locates, instantiates and registers all available plugins.
+     *
+     * @return void
+     */
+    protected function registerAllPlugins()
     {
-        /** @var ClassLoader $autoloader */
+        /** @var \Composer\Autoload\ClassLoader $autoloader */
         $autoloader = require base_path('vendor/autoload.php');
 
+        // Discover installed plugins
         $discoverer = new Discoverer(base_path('plugins'));
         $discoveries = $discoverer->discover();
 
+        // Register the autoloader of each plugin
         $discoveries->each->registerAutoloaders($autoloader);
+
+        // Instantiate every plugin and register it if possible
+        $discoveries->each(function ($element) {
+            $this->registerPlugin($element);
+        });
+    }
+
+    /**
+     * Instantiates and registers a given plugin after it has been discovered.
+     *
+     * @param DiscoveredPlugin $plugin
+     * @return void
+     */
+    protected function registerPlugin(DiscoveredPlugin $plugin)
+    {
+        $data = [
+            'path' => $plugin->getEntryClass(),
+            'enabled' => false,
+        ];
+
+        $entry = $plugin->getEntryClass();
+        if (!$entry)
+            $data['error'] = 'missing entry class';
+        elseif (!is_a($entry, Plugin::class, true))
+            $data['error'] = 'entry class is no plugin';
+        else {
+            /** @var Plugin $class */
+            $class = new $entry($this->app);
+
+            if ($class->canBeEnabled()) {
+                $class->register();
+
+                $data['enabled'] = true;
+                $data['object'] = $class;
+            }
+        }
+
+        $this->plugins[] = $data;
     }
 }
