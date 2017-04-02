@@ -15,10 +15,14 @@ Route::get('/', function () {
     return view('Hourglass::welcome');
 });
 
-Route::prefix('hourglass')->group(function () {
+Route::prefix('hourglass')->namespace('Administration')->group(function () {
 
     Route::get('/', function () {
         return view('Hourglass::welcome');
+    });
+
+    Route::prefix('plugins')->group(function() {
+       Route::get('/', 'PluginController@index');
     });
 
 });
