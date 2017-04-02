@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('Hourglass::welcome');
 });
+
+Route::prefix('hourglass')->group(function () {
+
+    Route::get('/', function () {
+        return view('Hourglass::welcome');
+    });
+
+});

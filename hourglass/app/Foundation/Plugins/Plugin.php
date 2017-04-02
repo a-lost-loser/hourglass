@@ -11,16 +11,6 @@ abstract class Plugin extends ServiceProvider
      */
     protected $configurationPath = '';
 
-    public function register()
-    {
-        //
-    }
-
-    public function boot()
-    {
-        //
-    }
-
     public final function canBeEnabled()
     {
         return true;

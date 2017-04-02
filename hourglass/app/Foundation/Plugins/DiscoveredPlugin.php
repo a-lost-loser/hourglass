@@ -29,11 +29,21 @@ class DiscoveredPlugin
         $this->package = $package;
     }
 
+    /**
+     * Returns the path of the discovered plugin.
+     *
+     * @return string
+     */
     public function getPath()
     {
         return $this->path;
     }
 
+    /**
+     * Returns the entry class of the plugin specified in the composer.json.
+     *
+     * @return null|string
+     */
     public function getEntryClass()
     {
         $extra = $this->package->getExtra();
@@ -43,7 +53,7 @@ class DiscoveredPlugin
     }
 
     /**
-     * Registers all autoloaders specified in the package with the given class loader
+     * Registers all autoloaders specified in the package with the given class loader.
      *
      * @param ClassLoader $autoloader
      */
@@ -58,7 +68,7 @@ class DiscoveredPlugin
     }
 
     /**
-     * Registers the given classmaps
+     * Registers the given classmaps.
      *
      * @param ClassLoader $autoloader
      * @param $value
@@ -73,7 +83,7 @@ class DiscoveredPlugin
     }
 
     /**
-     * Registers the given PSR-4 autoloaders
+     * Registers the given PSR-4 autoloaders.
      *
      * @param ClassLoader $autoloader
      * @param $value
@@ -86,7 +96,7 @@ class DiscoveredPlugin
     }
 
     /**
-     * Registers the given PSR-0 autoloaders
+     * Registers the given PSR-0 autoloaders.
      *
      * @param ClassLoader $autoloader
      * @param $value

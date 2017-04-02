@@ -1,8 +1,8 @@
 ![Hourglass Logo](http://i.imgur.com/fMJgiHW.jpg?2)
 
-We like to discuss and think forums are a great way to get in touch with your community.
-With **Hourglass** we want to make it hassle-free and easy to host and administrate your own forum.
-Hourglass is an adaptive, open-sourced forum system which tries to outperform competitive products by being simpler to use, administrate and develop for.
+Hourglass is a place for you and your community to meet and discuss. 
+
+We want to make everything in Hourglass easy to accomplish, both for you as an administrator and for your users. As such it is built as an adaptive, open-sourced forum system with a well thought out plugin API so it can be extended to everyone's needs.
 
 [![Build Status](https://img.shields.io/travis/hourglass/hourglass.svg?style=flat-square)](https://travis-ci.org/hourglass/hourglass)
 [![Code Coverage](https://img.shields.io/codacy/coverage/3b1f2c5b9cd04984814d914bcbfaff1b.svg?style=flat-square)](https://www.codacy.com/app/hourglass/hourglass/dashboard)
@@ -21,11 +21,11 @@ Hourglass is based on Laravel 5.4, so the same server requirements apply:
 - Mbstring PHP Extension
 - Tokenizer PHP Extension
 
-## Develop Hourglass
-The best way to get started with Hourglass is to read our documentation or some of our cookbooks. Feel free to contribute by either helping us improve the existing codebase, or by developing new plugins. We're also very appreciative of bug reports and feature requests.
+## Contribute to Hourglass
+The easiest way to contribute is by reporting bugs, creating feature requests and spreading the word. If you want to contribute code, please open a pull request to the `dev` branch with your improvements. You can also reach out to me directly at [christopher@padarom.io](mailto:christopher@padarom.io).
 
 #### Coding standards
-When contributing, please follow the following guides and code standards:
+When contributing code, please follow the following guides and code standards:
 
 * [PSR 1 Coding Standard](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md)
 * [PSR 2 Coding Style Guide](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
