@@ -5,8 +5,7 @@ Hourglass is a place for you and your community to meet and discuss.
 We want to make everything in Hourglass easy to accomplish, both for you as an administrator and for your users. As such it is built as an adaptive, open-sourced forum system with a well thought out plugin API so it can be extended to everyone's needs.
 
 [![Build Status](https://img.shields.io/travis/hourglass/hourglass.svg?style=flat-square)](https://travis-ci.org/hourglass/hourglass)
-[![Code Coverage](https://img.shields.io/codacy/coverage/3b1f2c5b9cd04984814d914bcbfaff1b.svg?style=flat-square)](https://www.codacy.com/app/hourglass/hourglass/dashboard)
-[![Code Quality](https://img.shields.io/codacy/grade/3b1f2c5b9cd04984814d914bcbfaff1b.svg?style=flat-square)](https://www.codacy.com/app/hourglass/hourglass/dashboard)
+[![Code Coverage](https://img.shields.io/codecov/c/github/hourglass/hourglass.svg?style=flat-square)](https://codecov.io/gh/hourglass/hourglass)
 [![License](https://img.shields.io/packagist/l/hourglass/hourglass.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 ## Install Hourglass
