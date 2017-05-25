@@ -40,6 +40,29 @@ class DiscoveredPlugin
     }
 
     /**
+     * Returns the pretty name (namespace + name) of the plugin.
+     *
+     * @return string
+     */
+    public function getIdentifier()
+    {
+        return $this->package->getPrettyName();
+    }
+
+    /**
+     * Returns the boot priority of the plugin.
+     *
+     * @return int
+     */
+    public function getBootPriority()
+    {
+        $extra = $this->package->getExtra();
+        if (!isset($extra['priority'])) return 10;
+
+        return (int) $extra['priority'];
+    }
+
+    /**
      * Returns the entry class of the plugin specified in the composer.json.
      *
      * @return null|string

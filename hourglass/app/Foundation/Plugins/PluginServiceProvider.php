@@ -20,7 +20,15 @@ class PluginServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // Boot all registered plugins sorted by their priority
+        collect($this->plugins)
+            ->sortBy('priority')
+            ->each(function ($plugin) {
+                if ($plugin['enabled']) {
+                    $plugin['object']->boot();
+                }
+            }
+        );
     }
 
     /**
@@ -65,7 +73,9 @@ class PluginServiceProvider extends ServiceProvider
     protected function registerPlugin(DiscoveredPlugin $plugin)
     {
         $data = [
+            'name' => $plugin->getIdentifier(),
             'path' => $plugin->getEntryClass(),
+            'priority' => $plugin->getBootPriority(),
             'enabled' => false,
         ];
 
@@ -73,7 +83,7 @@ class PluginServiceProvider extends ServiceProvider
         if (!$entry)
             $data['error'] = 'missing entry class';
         elseif (!is_a($entry, Plugin::class, true))
-            $data['error'] = 'entry class is no plugin';
+            $data['error'] = 'entry class isn\'t a plugin';
         else {
             /** @var Plugin $class */
             $class = new $entry($this->app);

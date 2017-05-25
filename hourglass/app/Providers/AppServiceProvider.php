@@ -19,7 +19,7 @@ class AppServiceProvider extends ServiceProvider
 
     protected function addViewNamespaces()
     {
-        $this->app->view->addNamespace('Hourglass', base_path('hourglass/resources/views'));
+        $this->loadViewsFrom(base_path('hourglass/resources/views'), 'Hourglass');
     }
 
     protected function addBladeDirectives()
