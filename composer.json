@@ -16,13 +16,13 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
+        "composer/composer": "^1.4",
         "hourglass/composer-plugin-installer": "~1.1",
         "hourglass/forum": "dev-master",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0"
     },
     "require-dev": {
-        "codacy/coverage": "^1.0",
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~5.7"
@@ -56,9 +56,12 @@
             "php artisan optimize"
         ]
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "config": {
-        "preferred-install": "dist",
+        "preferred-install": {
+		"hourglass/*": "source",
+		"*": "auto"
+	},
         "sort-packages": true
     }
 }
