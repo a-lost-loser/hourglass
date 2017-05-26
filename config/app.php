@@ -144,7 +144,6 @@ return [
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
         Illuminate\Cache\CacheServiceProvider::class,
-        Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,
         Illuminate\Cookie\CookieServiceProvider::class,
         Illuminate\Database\DatabaseServiceProvider::class,
         Illuminate\Encryption\EncryptionServiceProvider::class,
@@ -176,7 +175,9 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         Hourglass\Providers\EventServiceProvider::class,
         Hourglass\Providers\RouteServiceProvider::class,
+
         Hourglass\Foundation\Plugins\PluginServiceProvider::class,
+        Hourglass\Foundation\Providers\ConsoleSupportServiceProvider::class,
 
     ],
 
