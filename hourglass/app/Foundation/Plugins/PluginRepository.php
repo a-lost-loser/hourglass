@@ -6,9 +6,9 @@ use Illuminate\Support\Collection;
 
 final class PluginRepository
 {
-    public const ERROR_ENTRY_MISSING = 1;
+    const ERROR_ENTRY_MISSING = 1;
 
-    public const ERROR_ENTRY_NOT_A_PLUGIN = 2;
+    const ERROR_ENTRY_NOT_A_PLUGIN = 2;
 
     /**
      * @var Collection
