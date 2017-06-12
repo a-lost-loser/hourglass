@@ -16,6 +16,9 @@
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./hourglass</directory>
+            <exclude>
+                <directory>./hourglass/routes</directory>
+            </exclude>
         </whitelist>
     </filter>
     <php>
