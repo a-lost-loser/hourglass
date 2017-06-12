@@ -109,7 +109,7 @@ final class PluginRepository
     protected function discover()
     {
         // Discover installed plugins
-        $discoverer = new Discoverer(base_path('plugins'));
+        $discoverer = new Discoverer(config('app.plugin_path'));
         $discoveries = $discoverer->discover();
 
         return $discoveries;
@@ -135,6 +135,8 @@ final class PluginRepository
      */
     public function boot()
     {
+        if (!$this->registered) return;
+
         // Boot all registered plugins sorted by their priority
         $this->discoveredPlugins
             ->each(function ($plugin) {

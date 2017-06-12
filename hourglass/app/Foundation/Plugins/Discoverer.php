@@ -4,6 +4,7 @@ namespace Hourglass\Foundation\Plugins;
 
 use Composer\Package\Loader\ArrayLoader;
 use Composer\Package\Loader\JsonLoader;
+use Doctrine\Instantiator\Exception\UnexpectedValueException;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Collection;
 
@@ -41,13 +42,13 @@ class Discoverer
 
         // Convert plugins array to collection and omit all directories without a valid composer.json
         $plugins = collect($plugins);
-        $plugins = $plugins->map(function ($plugin) {
+        $plugins = $plugins->map(function ($plugin) use ($filesystem) {
             try {
                 $loader = new JsonLoader(new ArrayLoader);
                 $package = $loader->load($plugin.DIRECTORY_SEPARATOR.'composer.json');
 
                 return new DiscoveredPlugin($plugin, $package);
-            } catch (\UnexpectedValueException $e) {
+            } catch (\Exception $e) {
                 return null;
             }
         })->filter();

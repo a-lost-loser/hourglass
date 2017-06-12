@@ -124,6 +124,8 @@ return [
 
     'log_level' => env('APP_LOG_LEVEL', 'debug'),
 
+    'plugin_path' => env('PLUGIN_PATH', base_path('plugins')),
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers

@@ -29,11 +29,16 @@ class PluginServiceProvider extends ServiceProvider
     public function register()
     {
         $repository = $this->repository = new PluginRepository($this->app);
-        $this->repository->register();
 
         $this->app->singleton(PluginRepository::class, function () use ($repository) {
             return $repository;
         });
+
+        // We do not want to automatically register any plugins in the testing environment
+        if ($this->app->environment() == 'testing')
+            return;
+
+        $this->repository->register();
     }
 
     public function provides()
