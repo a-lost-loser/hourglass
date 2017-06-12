@@ -22,31 +22,6 @@ class ViewPluginDiscoveryTest extends TestCase
     }
 
     /** @test */
-    public function it_does_not_find_any_plugins_in_an_empty_plugins_folder()
-    {
-        $discoverer = new Discoverer(vfsStream::url('plugins'));
-        $plugins = $discoverer->discover();
-
-        $this->assertEmpty($plugins);
-    }
-
-    /** @test */
-    public function it_does_not_find_plugins_with_an_invalid_configuration_file()
-    {
-        vfsStream::create([
-            'demo' => [
-                'plugin1' => [ 'composer.json' => '' ],
-                'plugin2' => [ 'composer.yaml' => '' ],
-            ]
-        ], $this->root);
-
-        $discoverer = new Discoverer(vfsStream::url('plugins'));
-        $plugins = $discoverer->discover();
-
-        $this->assertEmpty($plugins);
-    }
-
-    /** @test */
     public function it_can_find_plugins_with_a_valid_configuration()
     {
         vfsStream::create([
@@ -60,13 +35,5 @@ class ViewPluginDiscoveryTest extends TestCase
         $plugins = $discoverer->discover();
 
         $this->assertEquals($plugins->count(), 1);
-    }
-
-    /** @test */
-    public function it_can_find_plugins()
-    {
-        $repository = $this->app->make(PluginRepository::class);
-        //dd($repository);
-        // Test code
     }
 }
