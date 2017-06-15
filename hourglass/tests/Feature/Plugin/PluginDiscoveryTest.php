@@ -3,12 +3,11 @@
 namespace Tests\Feature\Plugin;
 
 use Hourglass\Foundation\Plugins\Discoverer;
-use Hourglass\Foundation\Plugins\PluginRepository;
 use org\bovigo\vfs\vfsStream;
 use org\bovigo\vfs\vfsStreamDirectory;
 use Tests\TestCase;
 
-class ViewPluginDiscoveryTest extends TestCase
+class PluginDiscoveryTest extends TestCase
 {
     /**
      * @var vfsStreamDirectory
@@ -51,8 +50,13 @@ class ViewPluginDiscoveryTest extends TestCase
             return $i->getIdentifier();
         })->toArray();
 
+        $paths = $plugins->map(function ($i) {
+            return $i->getPath();
+        })->toArray();
+
         $this->assertContains('demo/plugin2', $identifiers);
-        $this->assertContains('demo/plugin3', $identifiers);
+
+        $this->assertContains('vfs://plugins/demo/plugin2', $paths);
     }
 
     /** @test */
