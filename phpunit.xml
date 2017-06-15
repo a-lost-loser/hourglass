@@ -18,6 +18,7 @@
             <directory suffix=".php">./hourglass</directory>
             <exclude>
                 <directory>./hourglass/routes</directory>
+                <directory>./hourglass/resources</directory>
             </exclude>
         </whitelist>
     </filter>
