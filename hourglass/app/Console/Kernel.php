@@ -20,7 +20,6 @@ class Kernel extends ConsoleKernel
         \Illuminate\Foundation\Bootstrap\SetRequestForConsole::class,
         \Illuminate\Foundation\Bootstrap\RegisterProviders::class,
         \Illuminate\Foundation\Bootstrap\BootProviders::class,
-        \Hourglass\Foundation\Bootstrap\RegisterPlugins::class,
     ];
 
     /**
