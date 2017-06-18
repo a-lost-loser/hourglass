@@ -5,16 +5,10 @@ namespace Tests\Feature\Plugin;
 use Hourglass\Foundation\Plugins\Discoverer;
 use Illuminate\Support\Collection;
 use org\bovigo\vfs\vfsStream;
-use org\bovigo\vfs\vfsStreamDirectory;
 use Tests\TestCase;
 
 class PluginAutoloaderTest extends TestCase
 {
-    /**
-     * @var vfsStreamDirectory
-     */
-    private $root;
-
     /**
      * @var Collection
      */
@@ -27,10 +21,7 @@ class PluginAutoloaderTest extends TestCase
 
     public function setUp()
     {
-        $this->root = vfsStream::setup('plugins');
-        $this->app = $this->createApplication();
-
-        $this->setUpVirtualPlugins();
+        parent::setUp();
 
         $discoverer = new Discoverer(vfsStream::url('plugins'));
         $this->plugins = $discoverer->discover();
@@ -38,7 +29,7 @@ class PluginAutoloaderTest extends TestCase
         $this->autoloader = require base_path('vendor/autoload.php');
     }
 
-    private function setUpVirtualPlugins()
+    public function setUpVirtualPlugins()
     {
         vfsStream::create([
             'acme' => [

@@ -34,15 +34,6 @@ class PluginServiceProvider extends ServiceProvider
             return $repository;
         });
 
-        // We do not want to automatically register any plugins in the testing environment
-        if ($this->app->environment() == 'testing')
-            return;
-
         $this->repository->register();
-    }
-
-    public function provides()
-    {
-        return [ PluginRepository::class ];
     }
 }

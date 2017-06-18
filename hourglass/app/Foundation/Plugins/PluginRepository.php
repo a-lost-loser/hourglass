@@ -6,6 +6,8 @@ use Illuminate\Support\Collection;
 
 final class PluginRepository
 {
+    const NO_ERROR = 0;
+
     const ERROR_ENTRY_MISSING = 1;
 
     const ERROR_ENTRY_NOT_A_PLUGIN = 2;
@@ -37,11 +39,26 @@ final class PluginRepository
      * @param   string  $name
      * @return  bool
      */
-    public function isInstalled($name)
+    public function wasDiscovered($name)
     {
         return $this->discoveredPlugins->contains(function ($plugin) use ($name) {
             return $plugin['identifier'] == $name;
         });
+    }
+
+    /**
+     * Returns the error of a given plugin, if any.
+     *
+     * @param   string  $name
+     * @return  int|bool
+     */
+    public function getError($name)
+    {
+        if (!$this->wasDiscovered($name)) return null;
+
+        return $this->discoveredPlugins
+            ->where('identifier', $name)
+            ->first()['error'];
     }
 
     /**
@@ -52,7 +69,7 @@ final class PluginRepository
      */
     public function getPath($name)
     {
-        if (!$this->isInstalled($name)) return null;
+        if (!$this->wasDiscovered($name)) return null;
 
         return $this->discoveredPlugins
             ->where('identifier', $name)
@@ -68,7 +85,7 @@ final class PluginRepository
     public function register()
     {
         if ($this->registered) return;
-        $this->registered;
+        $this->registered = true;
 
         $plugins = $this->discover();
         $this->registerAutoloaders($plugins);
@@ -78,12 +95,12 @@ final class PluginRepository
                 'identifier' => $plugin->getIdentifier(),
                 'discovery' => $plugin,
                 'enabled' => false,
-                'error' => false,
+                'error' => self::NO_ERROR,
             ];
 
             $entry = $plugin->getEntryClass();
             if (!$entry) $map['error'] = self::ERROR_ENTRY_MISSING;
-            if (!is_a($entry, Plugin::class, true)) $map['error'] = self::ERROR_ENTRY_NOT_A_PLUGIN;
+            elseif (!is_a($entry, Plugin::class, true)) $map['error'] = self::ERROR_ENTRY_NOT_A_PLUGIN;
 
             if ($map['error']) return $map;
 
