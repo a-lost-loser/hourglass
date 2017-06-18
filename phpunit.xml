@@ -15,11 +15,7 @@
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./hourglass</directory>
-            <exclude>
-                <directory>./hourglass/routes</directory>
-                <directory>./hourglass/resources</directory>
-            </exclude>
+            <directory suffix=".php">./hourglass/app</directory>
         </whitelist>
     </filter>
     <php>
