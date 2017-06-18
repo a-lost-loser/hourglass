@@ -86,7 +86,10 @@ class DiscoveredPlugin
 
         foreach ($autoloaders as $type => $value) {
             $method = camel_case('register-'.$type);
-            call_user_func([$this, $method], $autoloader, $value);
+
+            if (method_exists($this, $method)) {
+                call_user_func([$this, $method], $autoloader, $value);
+            }
         }
     }
 
@@ -115,19 +118,6 @@ class DiscoveredPlugin
     {
         collect($value)->each(function ($item, $key) use ($autoloader) {
             $autoloader->addPsr4($key, $this->path . DIRECTORY_SEPARATOR . $item);
-        });
-    }
-
-    /**
-     * Registers the given PSR-0 autoloaders.
-     *
-     * @param ClassLoader $autoloader
-     * @param $value
-     */
-    protected function registerPsr0(ClassLoader $autoloader, $value)
-    {
-        collect($value)->each(function ($item, $key) use ($autoloader) {
-            $autoloader->add($key, $this->path . DIRECTORY_SEPARATOR . $item);
         });
     }
 }

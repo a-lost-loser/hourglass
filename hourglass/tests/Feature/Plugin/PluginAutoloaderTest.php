@@ -33,10 +33,6 @@ class PluginAutoloaderTest extends TestCase
     {
         vfsStream::create([
             'acme' => [
-                'psr0' => [
-                    'composer.json' => '{"name":"acme/psr0","version":"0.0.1","autoload":{"psr-0":{"Acme\\\":"src"}}}',
-                    'src' => [ 'AcmePsr0Test.php' => '<?php namespace Acme; class AcmePsr0Test {}' ],
-                ],
                 'psr4' => [
                     'composer.json' => '{"name":"acme/psr4","version":"0.0.1","autoload":{"psr-4":{"Acme\\\Psr4\\\":"src"}}}',
                     'src' => [ 'AcmePsr4Test.php' => '<?php namespace Acme\\Psr4; class AcmePsr4Test {};' ],
@@ -66,5 +62,5 @@ class PluginAutoloaderTest extends TestCase
         $this->assertTrue(class_exists('\Acme\Psr4\AcmePsr4Test'));
     }
 
-    /// TODO: Add PSR-0 and Classmap Tests.
+    /// TODO: Add Classmap and Mixed Tests.
 }
