@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('Hourglass::welcome');
 });
 
-Route::prefix('hourglass')->namespace('Administration')->group(function () {
+Route::prefix('hourglass')->namespace('Administration')->middleware('backend')->group(function () {
 
     Route::get('/', function () {
         return view('Hourglass::welcome');
@@ -26,3 +26,6 @@ Route::prefix('hourglass')->namespace('Administration')->group(function () {
     });
 
 });
+
+Route::get('hourglass/login', 'Auth\LoginController@showLoginForm');
+Route::post('hourglass/login', 'Auth\LoginController@login');

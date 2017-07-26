@@ -25,7 +25,12 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/hourglass';
+
+    public function showLoginForm()
+    {
+        return view('Hourglass::backend.pages.login');
+    }
 
     /**
      * Create a new controller instance.
