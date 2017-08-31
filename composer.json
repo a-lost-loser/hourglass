@@ -2,7 +2,7 @@
     "name": "hourglass/hourglass",
     "description": "The Hourglass Forum Software",
     "keywords": ["hourglass", "board", "community", "laravel", "forum", "discussion"],
-    "license": "MIT",
+    "license": "CC-BY-4.0",
     "authors": [
         {
             "name": "Christopher Mühl",

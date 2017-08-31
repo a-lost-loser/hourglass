@@ -31,4 +31,4 @@ When contributing code, please follow the following guides and code standards:
 * [PSR 4 Autoloader](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md)
 
 ### License
-Hourglass is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Hourglass is open-sourced software licensed under [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0).
