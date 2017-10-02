@@ -6,7 +6,7 @@ We want to make everything in Hourglass easy to accomplish, both for you as an a
 
 [![Build Status](https://img.shields.io/travis/hourglass/hourglass.svg?style=flat-square)](https://travis-ci.org/hourglass/hourglass)
 [![Code Coverage](https://img.shields.io/codecov/c/github/hourglass/hourglass.svg?style=flat-square)](https://codecov.io/gh/hourglass/hourglass)
-[![License](https://img.shields.io/packagist/l/hourglass/hourglass.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/packagist/l/hourglass/hourglass.svg?style=flat-square)](https://creativecommons.org/licenses/by/4.0)
 
 ## Install Hourglass
 Detailed instructions on installing Hourglass can be found in our installation guide.
