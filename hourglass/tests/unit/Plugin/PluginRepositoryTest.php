@@ -1,16 +1,21 @@
 <?php
 
-namespace Tests\Feature\Plugin;
+namespace Tests\Unit\Plugin;
 
 use Hourglass\Foundation\Plugins\PluginRepository;
-use org\bovigo\vfs\vfsStream;
 use Tests\TestCase;
 
 class PluginRepositoryTest extends TestCase
 {
-    public function setUpVirtualPlugins()
+    public function setUp() {
+        parent::setUp();
+
+        $this->repository = $this->app->make(PluginRepository::class);
+    }
+    
+    public function virtualPluginFolderContent()
     {
-        vfsStream::create([
+        return [
             'acme' => [
                 'working' => [
                     'composer.json' => '{"name":"acme/working","version":"0.0.1","autoload":{"psr-4":{"Acme\\\":"src"}},"extra":{"entry":"Acme\\\WorkingPlugin"}}',
@@ -24,38 +29,35 @@ class PluginRepositoryTest extends TestCase
                     'src' => [ 'NotWorkingPlugin.php' => '<?php namespace Acme\\Noplugin; class NotWorkingPlugin {}' ],
                 ]
             ]
-        ], $this->root);
+        ];
     }
 
     /** @test */
     public function it_automatically_discovers_plugins()
     {
-        $repository = $this->app->make(PluginRepository::class);
+        // Note that we do not call any methods on the repository for it to discover plugins.
+        // This test checks, that discovery works when the application is run.
 
-        $this->assertTrue($repository->wasDiscovered('acme/working'));
-        $this->assertTrue($repository->wasDiscovered('acme/noentry'));
-        $this->assertTrue($repository->wasDiscovered('acme/noplugin'));
+        $this->assertTrue($this->repository->wasDiscovered('acme/working'));
+        $this->assertTrue($this->repository->wasDiscovered('acme/noentry'));
+        $this->assertTrue($this->repository->wasDiscovered('acme/noplugin'));
     }
 
     /** @test */
     public function it_returns_information_about_errors_with_plugins()
     {
-        $repository = $this->app->make(PluginRepository::class);
+        $this->assertNull($this->repository->getError('nonexisting/plugin'));
 
-        $this->assertNull($repository->getError('nonexisting/plugin'));
-
-        $this->assertEquals(PluginRepository::NO_ERROR, $repository->getError('acme/working'));
-        $this->assertEquals(PluginRepository::ERROR_ENTRY_MISSING, $repository->getError('acme/noentry'));
-        $this->assertEquals(PluginRepository::ERROR_ENTRY_NOT_A_PLUGIN, $repository->getError('acme/noplugin'));
+        $this->assertEquals(PluginRepository::NO_ERROR, $this->repository->getError('acme/working'));
+        $this->assertEquals(PluginRepository::ERROR_ENTRY_MISSING, $this->repository->getError('acme/noentry'));
+        $this->assertEquals(PluginRepository::ERROR_ENTRY_NOT_A_PLUGIN, $this->repository->getError('acme/noplugin'));
     }
 
     /** @test */
     public function it_returns_the_path_to_plugins()
     {
-        $repository = $this->app->make(PluginRepository::class);
+        $this->assertNull($this->repository->getPath('nonexisting/plugin'));
 
-        $this->assertNull($repository->getPath('nonexisting/plugin'));
-
-        $this->assertEquals('vfs://plugins/acme/working', $repository->getPath('acme/working'));
+        $this->assertEquals('vfs://plugins/acme/working', $this->repository->getPath('acme/working'));
     }
 }

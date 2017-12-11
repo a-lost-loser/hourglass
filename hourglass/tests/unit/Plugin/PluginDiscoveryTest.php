@@ -1,16 +1,15 @@
 <?php
 
-namespace Tests\Feature\Plugin;
+namespace Tests\Unit\Plugin;
 
 use Hourglass\Foundation\Plugins\Discoverer;
-use org\bovigo\vfs\vfsStream;
 use Tests\TestCase;
 
 class PluginDiscoveryTest extends TestCase
 {
-    public function setUpVirtualPlugins()
+    public function virtualPluginFolderContent()
     {
-        vfsStream::create([
+        return [
             'demo' => [
                 'plugin1' => [ 'composer.json' => '' ],
                 'plugin2' => [ 'composer.json' => '{"name":"demo/plugin2","version":"0.0.2"}' ],
@@ -18,13 +17,13 @@ class PluginDiscoveryTest extends TestCase
                     'composer.json' => '{"name":"demo/plugin3","version":"0.0.1","extra":{"entry":"Demo\\\Test","priority":100}}'
                 ],
             ]
-        ], $this->root);
+        ];
     }
 
     /** @test */
     public function it_can_find_plugins_with_a_valid_configuration()
     {
-        $discoverer = new Discoverer(vfsStream::url('plugins'));
+        $discoverer = new Discoverer($this->virtualUrl('plugins'));
         $plugins = $discoverer->discover();
 
         $this->assertEquals(2, $plugins->count());
@@ -33,7 +32,7 @@ class PluginDiscoveryTest extends TestCase
     /** @test */
     public function discovered_plugins_contain_identifiers_and_paths()
     {
-        $discoverer = new Discoverer(vfsStream::url('plugins'));
+        $discoverer = new Discoverer($this->virtualUrl('plugins'));
         $plugins = $discoverer->discover();
 
         $identifiers = $plugins->map(function ($i) {
@@ -52,7 +51,7 @@ class PluginDiscoveryTest extends TestCase
     /** @test */
     public function discovered_plugins_contain_their_entry_class_and_a_priority()
     {
-        $discoverer = new Discoverer(vfsStream::url('plugins'));
+        $discoverer = new Discoverer($this->virtualUrl('plugins'));
         $plugins = $discoverer->discover();
 
         $map = $plugins->mapWithKeys(function ($plugin) {

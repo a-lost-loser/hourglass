@@ -1,10 +1,9 @@
 <?php
 
-namespace Tests\Feature\Plugin;
+namespace Tests\Unit\Plugin;
 
 use Hourglass\Foundation\Plugins\Discoverer;
 use Illuminate\Support\Collection;
-use org\bovigo\vfs\vfsStream;
 use Tests\TestCase;
 
 class PluginAutoloaderTest extends TestCase
@@ -23,15 +22,15 @@ class PluginAutoloaderTest extends TestCase
     {
         parent::setUp();
 
-        $discoverer = new Discoverer(vfsStream::url('plugins'));
+        $discoverer = new Discoverer($this->virtualUrl('plugins'));
         $this->plugins = $discoverer->discover();
 
         $this->autoloader = require base_path('vendor/autoload.php');
     }
 
-    public function setUpVirtualPlugins()
+    public function virtualPluginFolderContent()
     {
-        vfsStream::create([
+        return [
             'acme' => [
                 'psr4' => [
                     'composer.json' => '{"name":"acme/psr4","version":"0.0.1","autoload":{"psr-4":{"Acme\\\Psr4\\\":"src"}}}',
@@ -47,17 +46,17 @@ class PluginAutoloaderTest extends TestCase
                     'src' => [ 'AcmeMixedPsr4Test.php' => '<?php namespace Acme\\Mixed; class AcmeMixedPsr4Test {}' ],
                 ],
             ]
-        ], $this->root);
+        ];
     }
 
     /** @test */
     public function it_can_register_psr_4_autoloaders()
     {
-        $psr0 = $this->plugins->filter(function ($p) {
+        $psr = $this->plugins->filter(function ($p) {
             return $p->getIdentifier() == 'acme/psr4';
         })->first();
 
-        $psr0->registerAutoloaders($this->autoloader);
+        $psr->registerAutoloaders($this->autoloader);
 
         $this->assertTrue(class_exists('\Acme\Psr4\AcmePsr4Test'));
     }
