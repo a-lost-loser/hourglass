@@ -1,0 +1,16 @@
+coverage:
+  precision: 2
+  
+  status:
+    project:
+      total:
+        enabled: yes
+        target: 90%
+        threshold: 2
+        if_no_uploads: failure
+
+      default:
+        enabled: yes
+        target: auto
+        threshold: 2
+        if_no_uploads: failure
